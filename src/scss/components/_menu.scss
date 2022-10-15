@@ -1,0 +1,239 @@
+.header {
+  // padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-menu;
+  box-shadow: 0 0 10px 5px rgb(116 110 78 / 50%);
+  z-index: 1;
+}
+
+.nav {
+  position: relative;
+
+  @media(max-width: 767px) {
+    overflow: auto;
+    height: 100vh;
+  }
+
+  &__header {
+    display: none;
+    width: 100%;
+    height: 7rem;
+    padding: 5rem 2rem;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px 5px rgb(116 110 78 / 50%);
+
+    @media(max-width: 767px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: .2rem solid rgb(116 110 78 / 50%);
+    border-radius: .5rem;
+
+    &:hover {
+      border: .2rem solid $cl-text;
+    }
+
+    &:hover .nav__icon-burger {
+      stroke: $cl-text;
+      rotate: 180deg;
+    }
+
+    &:hover .nav__icon-close {
+      fill: $cl-text;
+      rotate: 180deg;
+    }
+
+    // width: 5rem;
+    // height: 5rem;
+    // background-color: green;
+  }
+
+  &__icon-burger,
+  &__icon-close {
+    width: 5rem;
+    height: 5rem;
+    stroke: rgb(116 110 78 / 50%);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+
+  &__icon-close {
+    fill: rgb(116 110 78 / 50%);
+  }
+
+  &__icon-close._hidden,
+  &__icon-burger._hidden {
+    display: none;
+  }
+
+  &__menu {
+    @media (min-width: 767px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__menu._active {
+    display: block;
+  }
+
+  &__item {
+    margin: 0 auto;
+  }
+
+  &__dropdown {
+    display: block;
+    font-size: 2.4rem;
+    color: $cl-text;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2rem;
+
+    &:hover {
+      background-color: rgb(116 110 78 / 50%);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: rgb(116 110 78 / 50%);
+    }
+  }
+}
+
+.submenu {
+  position: absolute;
+  // margin: 0 auto;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // width: 120rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 6.5rem;
+  background-color: $white;
+  z-index: -10;
+  // box-shadow: inset 0px 7px 10px 0px #000000;
+  // box-shadow: inset 0 0 10px 5px rgb(116 110 78 / 50%);
+  // border-top: .1rem solid inset 0 0 10px 5px rgb(116 110 78 / 50%);
+  padding: 0 3rem;
+
+  @media(max-width: 767px) {
+    position: relative;
+  }
+
+  left: 50%;
+  // right: 50%;
+
+  transform: translate(-50%);
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__list--title {
+    font-weight: 700;
+  }
+
+  &__header {
+    padding: 2rem 0;
+    margin-bottom: 5rem;
+    border-bottom: .1rem solid rgb(116 110 78 / 50%);
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__box {
+    display: flex;
+    gap: 3rem;
+    width: 120rem;
+
+    // flex-wrap: wrap;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+
+  }
+
+  &__list {
+    // width: 30%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: ;
+    // align-items: flex-end;
+  }
+
+  &__list-item {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    // width: 32rem;
+  }
+
+  &__link {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $cl-text;
+
+    &:hover {
+      color: $cl-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+#dropdown-coins {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-200%, -200%);
+  pointer-events: none;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+#dropdown-coins._active {
+  display: block;
+}
+
+body._pc .nav__coins:hover>#dropdown-coins {
+  // display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%);
+  pointer-events: all;
+}
+
+body._touch .nav__coins:hover>#dropdown-coins {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  transform: translate(-50%);
+  pointer-events: all;
+}
