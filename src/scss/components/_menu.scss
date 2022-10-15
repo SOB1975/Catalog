@@ -233,7 +233,7 @@ body._pc .nav__coins:hover>#dropdown-coins {
 body._touch .nav__coins:hover>#dropdown-coins {
   opacity: 1;
   visibility: visible;
-  top: 0;
+  // top: 0;
   transform: translate(-50%);
   pointer-events: all;
 }
