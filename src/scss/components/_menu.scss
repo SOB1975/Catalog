@@ -4,9 +4,15 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: $bg-menu;
+  // background-color: $bg-menu;
+  background-color: #34bf49;
   box-shadow: 0 0 10px 5px rgb(116 110 78 / 50%);
-  z-index: 1;
+  // box-shadow: 0 0 10px 5px #34bf49;
+  z-index: 10000;
+
+  @media (max-width: 767px) {
+    background-color: transparent;
+  }
 }
 
 .nav {
@@ -92,6 +98,9 @@
 
     @media (max-width: 767px) {
       display: none;
+      background-color: $bg-menu;
+      min-height: 100vh;
+      z-index: 10;
     }
   }
 
@@ -101,19 +110,35 @@
 
   &__item {
     margin: 0 auto;
+    z-index: 10000;
   }
 
   &__dropdown {
-    display: block;
+    display: flex;
     font-size: 2.4rem;
     color: $cl-text;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     padding: 2rem;
+    height: 100%;
 
     &:hover {
       background-color: rgb(116 110 78 / 50%);
+      color: $bg-menu;
+
+    }
+
+    &:hover .first__icon {
+      // background-color: rgb(116 110 78 / 50%);
+      fill: $bg-menu;
+      stroke: $bg-menu;
+    }
+
+    &:hover .arrow__icon {
+      // background-color: rgb(116 110 78 / 50%);
+      fill: $bg-menu;
+      // stroke: $bg-menu;
     }
 
     &:focus {
@@ -125,16 +150,15 @@
 
 .submenu {
   position: absolute;
-  // margin: 0 auto;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // width: 120rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-200%, -200%);
+  pointer-events: none;
   overflow-y: auto;
   overflow-x: hidden;
   top: 6.5rem;
   background-color: $white;
-  z-index: -10;
+  z-index: 1000;
   // box-shadow: inset 0px 7px 10px 0px #000000;
   // box-shadow: inset 0 0 10px 5px rgb(116 110 78 / 50%);
   // border-top: .1rem solid inset 0 0 10px 5px rgb(116 110 78 / 50%);
@@ -142,6 +166,8 @@
 
   @media(max-width: 767px) {
     position: relative;
+    top: 0;
+    display: none;
   }
 
   left: 50%;
@@ -176,6 +202,7 @@
     @media (max-width: 767px) {
       flex-direction: column;
       margin-top: 2rem;
+      gap: 1rem;
     }
 
   }
@@ -207,39 +234,109 @@
   }
 }
 
-#dropdown-coins {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-200%, -200%);
-  pointer-events: none;
+.first {
 
-  @media (max-width: 767px) {
-    display: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: .5rem;
+  margin-bottom: 0.5rem;
+  // padding-bottom: 2rem;
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: $cl-text;
+    stroke: $cl-text;
+    stroke-width: 1;
   }
 }
 
-#dropdown-coins._active {
-  display: block;
+.arrow {
+  display: none;
+  width: 3rem;
+  height: 3rem;
 }
 
-body._pc .nav__coins:hover>#dropdown-coins {
+.arrow__icon {
+  width: 3rem;
+  height: 3rem;
+  fill: $cl-text;
+}
+
+
+body._pc .nav__item:hover>.submenu {
   // display: block;
+
+  @media (min-width: 767px) {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%);
+    pointer-events: all;
+
+  }
+}
+
+body._pc .nav__item>.submenu._active {
+  display: block;
   opacity: 1;
   visibility: visible;
   transform: translate(-50%);
   pointer-events: all;
 }
 
-body._touch #dropdown-coins {
+//Экран с точ падом скрываем пункт меню 
+body._touch .submenu {
   opacity: 0;
   visibility: hidden;
   transform: translate(-200%);
   pointer-events: none;
+
+  @media(min-width: 767px) {
+    top: 7rem;
+  }
 }
 
-body._touch #dropdown-coins._active {
+//показываем подменю после нажатия на пункт монеты 
+body._touch .submenu._active {
+  // top: 7rem;
+  display: block;
   opacity: 1;
   visibility: visible;
   transform: translate(-50%);
   pointer-events: all;
+}
+
+//добавляем стрелки в пункты меню при touch
+body._touch .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  // padding-top: 0.2rem;
+  // padding-left: 0.5rem;
+  // width: 0;
+  // height: 0;
+  // border-left: 5px solid transparent;
+  // border-right: 5px solid transparent;
+  // border-top: 10px solid $cl-text;
+  // margin-left: 5px;
+}
+
+body._touch .nav__dropdown {
+  display: flex;
+  align-items: center;
+}
+
+body._touch .arrow {
+  margin-right: 0;
+  margin-left: auto;
+  // align-items: flex-end;
+}
+
+body._touch ._arrow-rotate {
+  transform: rotate(-180deg);
+  // padding-top: 0;
+  // padding-left: 0;
+  // padding-bottom: 10rem;
+  // padding-right: 4rem;
 }

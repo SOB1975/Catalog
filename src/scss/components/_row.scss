@@ -1,0 +1,9 @@
+.row {
+  width: 100%;
+
+  &__title {
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: $cl-text;
+  }
+}

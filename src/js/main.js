@@ -74,22 +74,57 @@ if (navBurger) {
   navBurger.addEventListener('click', function () {
     // console.log('Test');
     navMenu.classList.toggle('_active');
-    dropDownCoins.classList.remove('_active');
+    // dropDownCoins.classList.remove('_active');
     iconClose.classList.toggle('_hidden');
     iconBurger.classList.toggle('_hidden');
   });
 }
-//Подменю
-const navCoins = document.querySelector('#nav-coins');
-const dropDownCoins = document.querySelector('#dropdown-coins');
+//Подменю Монеты
+// const navCoins = document.querySelector('#nav-coins');
+// const dropDownCoins = document.querySelector('#dropdown-coins');
+// const arrow = document.querySelector('.arrow');
 // console.log(menuBurger);
 // console.log(dropDownCoins);
 // Проверим что есть объект
-if (navCoins) {
-  // Слушаем событие пункта меню Монеты
-  navCoins.addEventListener('click', function () {
-    // console.log('Test');
-    dropDownCoins.classList.toggle('_active');
+// if (navCoins) {
+// Слушаем событие пункта меню Монеты
+// navCoins.addEventListener('click', function () {
+// console.log('Test');
+// dropDownCoins.classList.toggle('_active');
+// arrow.classList.toggle('_arrow-rotate');
+// });
+// console.log(menuBurger);
+// }
+const arrowAll = document.querySelectorAll('.arrow');
+const allMenuItem = document.querySelectorAll('.nav__item');
+const subMenu = document.querySelectorAll('.submenu');
+console.log(allMenuItem);
+if (allMenuItem) {
+  console.log('Test');
+  allMenuItem.forEach(function (item, index) {
+    console.log(index);
+    item.addEventListener('click', function (e) {
+      arrowAll.forEach(function (item, i) {
+        if (index == i) {
+          item.classList.toggle('_arrow-rotate');
+        } else {
+          item.classList.remove('_arrow-rotate');
+        }
+      });
+
+      subMenu.forEach(function (item, i) {
+        if (index == i + 1) {
+          item.classList.toggle('_active');
+        } else {
+          item.classList.remove('_active');
+        }
+      });
+      // console.log('Klik');
+      // console.log(this);
+      // subMenu.classList.toggle('_active');
+
+      // item.classList.toggle('_active');
+    });
   });
-  // console.log(menuBurger);
+  // });
 }

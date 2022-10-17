@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  transition: all .3s linear;
+  transition: all .2s linear;
 }
 
 html {
@@ -109,8 +109,13 @@ footer {
   max-width: 120rem;
   width: 100%;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .hidden {
   display: none;
+}
+
+.flex {
+  display: flex;
 }
