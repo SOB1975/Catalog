@@ -1,0 +1,31 @@
+.tooltip {
+  // display: none;
+  display: block;
+  position: absolute;
+  top: -160%;
+  left: -45%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+  // width: 7rem;
+  // height: 5rem;
+
+  &__icon {
+    width: 10rem;
+    z-index: -1;
+    height: 7rem;
+    fill: $cl-text;
+    // height: 5rem;
+  }
+
+  &__message {
+    position: absolute;
+    font-size: 1.4rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $bg-menu;
+    z-index: 10;
+  }
+}

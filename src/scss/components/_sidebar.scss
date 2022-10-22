@@ -1,5 +1,12 @@
 .sidebar {
   flex: 0 0 27rem;
-  height: 500px;
-  background-color: red;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__title--mt {
+    margin-top: 2rem;
+  }
 }
