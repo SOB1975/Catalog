@@ -122,9 +122,10 @@
   }
 
   &__year {
-    font-size: 1.8rem;
+    font-size: inherit;
     color: $cl-text;
     line-height: 150%;
+    font-weight: 700;
   }
 
   &__box {
@@ -137,6 +138,7 @@
   &__text {
     // height: 10rem;
     font-size: 1.8rem;
+    font-weight: 700;
     text-decoration: none;
     color: $cl-text;
 
@@ -151,6 +153,7 @@
     font-size: 2.2rem;
     text-decoration: none;
     color: $cl-text;
+    font-weight: 700;
 
     &._row {
       font-size: 3rem;

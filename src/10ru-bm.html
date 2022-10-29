@@ -5,37 +5,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/Other/coins_icon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Каталог</title>
 </head>
 
 <body>
 
+  <!-- Шапка сайта -->
   <header class="header">
-
+    <!-- Ограничивающий контейнер -->
     <div class="container">
-
+      <!-- Навигация по сайту -->
       <nav class="nav">
-
+        <!-- Шапка меню -->
         <div class="nav__header">
+          <!-- Заголовок меню -->
           <h2 class="nav__title">Меню</h2>
+          <!-- Кнопка меню burger -->
           <button class="nav__burger">
-
+            <!-- Иконка burger -->
             <svg class="nav__icon-burger">
               <use xlink:href="img/sprite.svg#menu_burger_horizontal_icon"></use>
             </svg>
-
+            <!-- Иконка close -->
             <svg class="nav__icon-close _hidden">
               <use xlink:href="img/sprite.svg#close_round_icon"></use>
             </svg>
 
           </button>
+
         </div>
-
+        <!-- Список меню -->
         <ul class="nav__menu">
-
+          <!-- Элемент меню -->
           <li class="nav__item">
-
+            <!-- Ссылка на главную страницу -->
             <a href="index.html" class="nav__dropdown">
               <div class="first">
                 <svg class="first__icon">
@@ -49,11 +54,11 @@
             </a>
 
           </li>
-
+          <!-- Элемент меню -->
           <li class="nav__item">
-
+            <!-- Ссылка на подменю монеты -->
             <a href="#" class="nav__dropdown">
-
+              <!-- Иконка монет -->
               <div class="first">
                 <svg class="first__icon">
                   <use xlink:href="img/sprite.svg#coins_icon"></use>
@@ -61,7 +66,7 @@
               </div>
 
               Монеты
-
+              <!-- Иконка стрелка -->
               <div class="arrow">
                 <svg class="arrow__icon">
                   <use xlink:href="img/sprite.svg#arrow_down_drop_icon"></use>
@@ -69,35 +74,38 @@
               </div>
 
             </a>
-
+            <!-- Подменю -->
             <div class="submenu">
-
+              <!-- Шапка и заголовок подменю -->
               <div class="submenu__header">
                 <h2 class="submenu__title">Монеты</h2>
               </div>
-
+              <!-- контейнер подменю -->
               <div class="submenu__box">
-
+                <!-- Список подменю -->
                 <ul class="submenu__list">
-
+                  <!-- Элемент подменю и заголовок -->
                   <li class="submenu__list-item submenu__list--title">
                     Россия
                   </li>
-
+                  <!-- Элемент подменю -->
                   <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
                     <a class="submenu__link" href="coins-jub-ru.html">Юбилейные</a>
                   </li>
-
+                  <!-- Элемент подменю -->
                   <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
                     <a class="submenu__link" href="coins-reg-ru.html">Регулярные</a>
                   </li>
-
+                  <!-- Элемент подменю -->
                   <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
                     <a class="submenu__link" href="coins-silver-ru.html">Серебряные</a>
                   </li>
 
                 </ul>
-
+                <!-- Список подменю -->
                 <ul class="submenu__list">
 
                   <li class="submenu__list-item submenu__list--title">
@@ -117,7 +125,7 @@
                   </li>
 
                 </ul>
-
+                <!-- Список подменю -->
                 <ul class="submenu__list">
 
                   <li class="submenu__list-item submenu__list--title">
@@ -149,7 +157,7 @@
                   </li>
 
                 </ul>
-
+                <!-- Список подменю -->
                 <ul class="submenu__list">
 
                   <li class="submenu__list-item submenu__list--title">
@@ -169,7 +177,7 @@
                   </li>
 
                 </ul>
-
+                <!-- Список подменю -->
                 <ul class="submenu__list">
 
                   <li class="submenu__list-item submenu__list--title">
@@ -237,7 +245,7 @@
                   </li>
 
                 </ul>
-
+                <!-- Список подменю -->
                 <ul class="submenu__list">
 
                   <li class="submenu__list-item submenu__list--title">
@@ -287,7 +295,7 @@
             </div>
 
           </li>
-
+          <!-- Элемент меню -->
           <li class="nav__item">
 
             <a href="#" class="nav__dropdown">
@@ -337,7 +345,7 @@
             </div>
 
           </li>
-
+          <!-- Элемент меню -->
           <li class="nav__item">
 
             <a href="#" class="nav__dropdown">
@@ -347,13 +355,36 @@
                   <use xlink:href="img/sprite.svg#medal-solid"></use>
                 </svg>
               </div>
-
               Медали
-
             </a>
 
-          </li>
+            <div class="submenu">
 
+              <div class="submenu__header">
+                <h2 class="submenu__title">Медали</h2>
+              </div>
+
+              <div class="submenu__box">
+
+                <ul class="submenu__list">
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="medal-table.html">Настольные медали</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="medal-wow.html">Медали и Ордена ВОВ</a>
+                  </li>
+
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+          <!-- Элемент меню -->
           <li class="nav__item">
 
             <a href="#" class="nav__dropdown">
@@ -368,8 +399,41 @@
 
             </a>
 
-          </li>
+            <div class="submenu">
 
+              <div class="submenu__header">
+                <h2 class="submenu__title">Лекарства</h2>
+              </div>
+
+              <div class="submenu__box">
+
+                <ul class="submenu__list">
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="medic-anesthetic.html">Обезбаливающие</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="medic-cold.html">От простуды</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="medic-vitamine.html">Витамины</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="medic-other.html">Другое</a>
+                  </li>
+
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+          <!-- Элемент меню -->
           <li class="nav__item">
 
             <a href="#" class="nav__dropdown">
@@ -383,6 +447,39 @@
               Книги
 
             </a>
+
+            <div class="submenu">
+
+              <div class="submenu__header">
+                <h2 class="submenu__title">Книги</h2>
+              </div>
+
+              <div class="submenu__box">
+
+                <ul class="submenu__list">
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="book-fantastic.html">Фантастика</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="book-fantasy.html">Фэнтези</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="book-tech.html">Техническая литература</a>
+                  </li>
+
+                  <li class="submenu__list-item">
+                    <a class="submenu__link" href="book-different.html">Разное</a>
+                  </li>
+
+
+                </ul>
+
+              </div>
+
+            </div>
 
           </li>
 
@@ -1997,7 +2094,7 @@
 
               <div class="product__triangle-green" title="В коллекции"></div>
 
-              <a class="product__link" href="#">
+              <a class="product__link" href="10-ru-bm-smd-politruk.html">
 
                 <div class="product__image">
                   <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2000/10_politruk.jpg" alt="10 рублей 2000 Политрук СПМД">
@@ -2042,7 +2139,7 @@
 
               <div class="product__triangle-green" title="В коллекции"></div>
 
-              <a class="product__link" href="#">
+              <a class="product__link" href="10-ru-bm-mmd-politruk.html">
 
                 <div class="product__image">
                   <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2000/10_politruk.jpg" alt="10 рублей 2000 Политрук СПМД">
@@ -2089,15 +2186,59 @@
               <a class="product__link" href="#">
 
                 <div class="product__image">
-                  <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2000/10_politruk.jpg" alt="10 рублей 2000 Политрук СПМД">
+                  <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2001/10_gagarin.jpg" alt="10 рублей 2001 40 лет косм. полета Ю.А.Гагарина. СПМД">
                 </div>
 
                 <div class="product__container">
 
                   <h3 class="product__name">
                     10 рублей
-                    <span class="product__year">2000</span>
-                    Политрук ММД
+                    <span class="product__year">2001</span>
+                    40 лет косм. полета Ю.А.Гагарина. СПМД
+                  </h3>
+
+                  <div class="product__body">
+
+                    <div class="product__box">
+                      <span class="product__text">Стоимость:</span>
+                      <span class="product__price">
+                        69
+                        <span class="product__text">₽</span>
+                      </span>
+                    </div>
+
+                    <div class="product__box">
+                      <span class="product__text">В коллекции:</span>
+                      <span class="product__count">
+                        8
+                        <span class="product__text">шт</span>
+                      </span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </a>
+
+            </div>
+
+            <div class="product">
+
+              <div class="product__triangle-green" title="В коллекции"></div>
+
+              <a class="product__link" href="#">
+
+                <div class="product__image">
+                  <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2001/10_gagarin.jpg" alt="10 рублей 2001 40 лет косм. полета Ю.А.Гагарина. ММД">
+                </div>
+
+                <div class="product__container">
+
+                  <h3 class="product__name">
+                    10 рублей
+                    <span class="product__year">2001</span>
+                    40 лет косм. полета Ю.А.Гагарина. ММД
                   </h3>
 
                   <div class="product__body">
@@ -2140,7 +2281,310 @@
   </main>
 
   <div class="footer">
-    footer
+    <!-- footer меню -->
+    <nav class="footer__menu">
+
+      <div class="footer__menu-box">
+        <h3 class="footer__title">Монеты</h3>
+        <div class="footer__wrapper">
+          <!-- список меню -->
+          <ul class="footer__list">
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <h3 class="footer__subtitle">Россия</h3>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-jub-ru.html">Юбилейные</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-reg-ru.html">Регулярные</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-silver-ru.html">Серебряные</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <h3 class="footer__subtitle">СССP</h3>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-jub-ussr.html">Юбилейные</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-reg-ussr.html">Регулярные</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-silver-ussr.html">Серебряные</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <h3 class="footer__subtitle">Европа</h3>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-eu.html">Евросоюз</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-british.html">Англия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-poland.html">Польша</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-hungary.html">Венгрия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-germany.html">Германия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-france.html">Франция</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <h3 class="footer__subtitle">Америка</h3>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-arg.html">Аргентина</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-brazil.html">Бразилия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-usa.html">США</a>
+            </li>
+
+
+
+          </ul>
+          <!-- список меню -->
+          <ul class="footer__list">
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <h3 class="footer__subtitle">СНГ и Балтия</h3>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-azer.html">Азербайджан</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-armenia.html">Армения</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-belarus.html">Беларусь</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-georgia.html">Грузия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-kazahstan.html">Казахстан</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-kyrgyzstan.html">Киргизия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-latvia.html">Латвия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-litva.html">Литва</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-moldova.html">Молдавия</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-transnistria.html">Приднестровье</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-tadjikistan.html">Таджикистан</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-turkmenistan.html">Туркмения</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-uzbekistan.html">Узбекистан</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-ukraine.html">Украина</a>
+            </li>
+
+          </ul>
+          <!-- список меню -->
+          <ul class="footer__list">
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <h3 class="footer__subtitle">Российская Империя</h3>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-nikolai2.html">Николай II</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-alexandr3.html">Александр III</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-alexandr2.html">Александр II</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-nikolai1.html">Николай I</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-alexandr1.html">Александр I</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-pavel1.html">Павел I</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-ekaterina2.html">Екатерина II</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-elisabeth1.html">Елизавета I</a>
+            </li>
+            <!-- элемент списка меню -->
+            <li class="footer__item">
+              <a class="footer__link" href="coins-petr1.html">Пётр I</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="footer__menu-box">
+        <!-- список меню -->
+        <ul class="footer__list">
+          <h3 class="footer__title">Банкноты</h3>
+
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="banknot-ru.html">Россия</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="banknot-eu.html">Европа</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="banknot-am.html">Америка</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="banknot-as.html">Азия</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer__menu-box">
+        <!-- список меню -->
+        <ul class="footer__list">
+
+          <h3 class="footer__title">Медали</h3>
+
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="medal-table.html">Настольные медали</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="medal-wow.html">Медали и Ордена ВОВ</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer__menu-box">
+        <!-- список меню -->
+        <ul class="footer__list">
+
+          <h3 class="footer__title">Лекарства</h3>
+
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="medic-anesthetic.html">Обезбаливающие</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="medic-cold.html">От простуды</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="medic-vitamine.html">Витамины</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="medic-other.html">Другое</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer__menu-box">
+        <!-- список меню -->
+        <ul class="footer__list">
+
+          <h3 class="footer__title">Книги</h3>
+
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="book-fantastic.html">Фантастика</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="book-fantasy.html">Фэнтези</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="book-tech.html">Техническая литература</a>
+          </li>
+          <!-- элемент списка меню -->
+          <li class="footer__item">
+            <a class="footer__link" href="book-different.html">Разное</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+    <!-- footer-slider -->
+
+
   </div>
 
   <!-- </div> -->

@@ -1,3 +1,4 @@
+"use strict" //обрабатываем код в строгом режиме
 import {
   asd
 } from './func.js';
@@ -5,24 +6,61 @@ asd();
 // import Swiper JS
 import Swiper, {
   Navigation,
-  Pagination
+  Pagination,
+  Thumbs
 } from 'swiper';
-// import Swiper styles
-// import 'swiper/css';
+// import htmlmin from 'gulp-htmlmin';
 
-const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+//Pagination
+const swiper = new Swiper('.product-slider2', {
+  modules: [Navigation, Pagination, Thumbs],
+  spaceBetween: 10,
+  slidesPerView: 1,
+  cssMode: true,
+
+  // loop: false,
+  // freeMode: true,
+  // watchSlidesProgress: true,
+
+});
+
+const swiper2 = new Swiper(".product-slider", {
+  modules: [Navigation, Pagination, Thumbs],
+  spaceBetween: 0,
+  cssMode: true,
+  slidesPerView: 1,
+
+  // navigation: {
+  // nextEl: ".swiper-button-next",
+  // prevEl: ".swiper-button-prev",
+  // },
+  thumbs: {
+    swiper: swiper,
   },
 });
 
+// Изменяем border thumbs
+// const slide2 = document.querySelectorAll('.product-slider2__slide');
+
+// if (slide2) {
+//   slide2.forEach(function (item) {
+//     item.addEventListener('click', function () {
+
+//       console.log(item);
+//       onchange = function () {
+//         console.log('klik');
+//         item.classList.toggle('_bg');
+//       }
+//       // item.classList.remove('_bg');
+
+//       // slide2[index].classList.remove('_bg');
+//     });
+//   });
+// }
+
+
 // Код определяет на каком устройстве запущен сайт
-"use strict" //обрабатываем код в строгом режиме
+
 const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -119,14 +157,8 @@ if (allMenuItem) {
           item.classList.remove('_active');
         }
       });
-      // console.log('Klik');
-      // console.log(this);
-      // subMenu.classList.toggle('_active');
-
-      // item.classList.toggle('_active');
     });
   });
-  // });
 }
 
 //меню фильтров
@@ -149,8 +181,6 @@ if (menuFiltr) {
         }
       });
 
-
-      console.log('Кликаю');
       menuFiltrSubmenu.forEach(function (item, i) {
         if (index == i) {
           item.classList.toggle('_active');
@@ -384,5 +414,82 @@ if (srtList) {
     //   });
     // }
 
+  });
+}
+
+// modal - status
+// находим модальное окно
+const modalStatus = document.querySelector('.modal-status');
+const htmlTeg = document.querySelector('.html');
+// console.log(htmlTeg);
+//находим кнопку открытия модального окна
+const btnOpen = document.querySelector('.accordion__list-btn');
+// console.log(htmlTeg);
+// находим кнопки закрытия модального окна 
+const btnClose = document.querySelectorAll('.btn-close');
+//проверяем наличие кнопки
+if (btnOpen) {
+  // слушаем найденную кнопку
+  btnOpen.addEventListener('click', function () {
+    //убираем прокруту
+    htmlTeg.classList.add('_hidden');
+    // открываем модальное окно
+    modalStatus.classList.remove('_hidden');
+
+  });
+}
+//проверяем наличие кнопок
+if (btnClose) {
+  //перебираем и находим конкретную кнопку
+  btnClose.forEach(function (item) {
+    // слушаем найденную кнопку
+    item.addEventListener('click', function () {
+      // скрываем модальное окно
+      modalStatus.classList.add('_hidden');
+      //возвращаем прокрутку
+      htmlTeg.classList.remove('_hidden');
+    });
+  });
+}
+
+// modal-slider
+
+const swiper3 = new Swiper(".modal-swiper", {
+  modules: [Navigation, Pagination],
+  spaceBetween: 0,
+  slidesPerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Закрываем модальное окно со слайдером
+const modalSliderClose = document.querySelector('.modal-slider__close');
+const modalSlider = document.querySelector('.modal-slider');
+const modalSliderSlide = document.querySelectorAll('.modal-slider__slide');
+if (modalSliderClose) {
+  modalSliderClose.addEventListener('click', function () {
+    console.log('test');
+    // console.log(modalSliderSlide[index]);
+    modalSlider.classList.toggle('_hidden');
+  });
+}
+// открываем модальное окно со слайдером
+const slide = document.querySelectorAll('.product-slider__slide');
+if (slide) {
+  slide.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      modalSlider.classList.remove('_hidden');
+      // log();
+      modalSliderSlide.forEach(function (item, i) {
+
+      });
+      // console.log(index);
+    });
   });
 }

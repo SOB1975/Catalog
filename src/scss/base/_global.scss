@@ -18,7 +18,7 @@ html {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $black;
+    background: $bg-border-accordion;
   }
 
   @media (max-width: 108em) {
@@ -84,8 +84,13 @@ html {
 
 }
 
+html._hidden {
+  overflow: hidden;
+}
+
 body {
   display: flex;
+  position: relative;
   flex-direction: column;
   min-height: 100%;
   background-color: $bg-menu;
@@ -97,7 +102,7 @@ header {
 }
 
 main {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   padding-top: 7rem;
 }
 
@@ -118,4 +123,8 @@ footer {
 
 .flex {
   display: flex;
+}
+
+.bg-body {
+  background: $white;
 }

@@ -1,0 +1,135 @@
+// стилизация 
+.product-info {
+  display: flex;
+  width: 100%;
+  padding-top: 5rem;
+
+  // стилизация контейнера
+  &__container {
+    flex: 0 0 50%;
+    position: relative;
+  }
+
+
+  // стилизация заголовка
+  &__title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: $cl-text;
+    margin-right: 5rem;
+  }
+
+}
+
+// стилизация первого слайдера
+.product-slider {
+  // position: relative;
+  // &:after{
+  // posa
+  // }
+
+  // стилизация внутренней обертки
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    // justify-content: center;
+    max-height: 50rem;
+    // width: 60rem;
+    // height: 60rem;
+  }
+
+  // стилизация слайда
+  &__slide {
+    display: flex;
+    justify-content: center;
+    // width: 32rem !important;
+    // flex: 0 0 65%;
+    // height: 32rem;
+    // border: .1rem solid $black;
+    height: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // стилизация изображения слайда
+  &__img {
+    display: block;
+    // object-fit: cover;
+    // object-position: center;
+    // width: 100%;
+    height: auto;
+  }
+}
+
+// стилизация второго слайдера
+.product-slider2 {
+  padding-top: 3rem;
+  padding-left: 7rem;
+  // border: 1px solid $black;
+
+  // стилизация внутренней обертки
+  &__wrapper {
+    width: 100%;
+  }
+
+  // стилизация слайда
+  &__slide {
+    width: 15rem !important;
+    padding: 1rem;
+    height: auto;
+    cursor: pointer;
+  }
+
+  // стилизация контейнера изображения слайда
+  &__image {
+    padding: 1rem;
+    border-radius: .3rem;
+  }
+
+  // стилизация radio кнопки
+  &__input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+
+    &:checked+.product-slider2__image {
+      border: .1rem solid $bg-thumbs;
+    }
+  }
+
+  // стилизация изображения слайда
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// стилизация качества монет
+.label-condition {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  width: 7rem;
+  height: 4rem;
+  color: $bg-menu;
+  background: rgba($cl-text, .8);
+  top: 10rem;
+  left: 5%;
+  z-index: 1000;
+  cursor: default;
+}
+
+// .label-condition>span {
+//   width: 100%;
+//   display: block;
+// }
