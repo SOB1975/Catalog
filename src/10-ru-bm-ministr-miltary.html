@@ -11,99 +11,6 @@
 </head>
 
 <body class="bg-body">
-  <!-- модальное окно состояние монеты -->
-  <div class="modal-status _hidden">
-
-    <!-- контейнер для окна -->
-    <div class="modal-status__container">
-      <!-- шапка окна -->
-      <div class="modal-status__header">
-        <h3 class="modal-status__title">УРОВНИ ОЦЕНКИ СОСТОЯНИЯ МОНЕТ</h3>
-        <button class="btn-close">
-          <svg class="modal-status__icon-close">
-            <use xlink:href="img/sprite.svg#close_round_icon"></use>
-          </svg>
-        </button>
-
-      </div>
-      <!-- контент окна -->
-      <div class="modal-status__body">
-        <strong>UNC — Uncirculated</strong>
-        <p>Uncirculated (превосходное состояние). В данном состоянии монета не должна иметь никаких признаков потёртости, а все её детали рисунка обычно чётко различимы. У монет в этом состоянии на всей площади их поверхности часто присутствует оригинальный «чеканный» блеск. При этом допустимо присутствие незначительных следов от хранения монет в мешках в виде мелких забоин или царапин и некоторых других недостатков.</p>
-        <p>
-          <strong>XF — Extremely Fine</strong>
-        </p>
-        <p>Extremely Fine (отличное состояние). Монеты в состоянии Extremely Fine (сокр. XF) имеют весьма незначительную потёртость наиболее выступающих мелких элементов рисунка. Обычно на таких монетах хорошо различимо не менее 90 — 95 % мелких деталей.</p>
-        <p>
-          <strong>VF — Very Fine</strong>
-        </p>
-        <p>Very Fine (очень хорошее состояние). В состоянии Very Fine (сокр. VF) монеты уже имеют весьма заметную потёртость, и несколько сглаженные детали рисунка (как правило, хорошо различимо лишь порядка 75 % деталей рисунка).</p>
-        <p>
-          <strong>F — Fine</strong>
-        </p>
-        <p>Fine (хорошее состояние). Состояние Fine (сокр. F) определяется выраженной потёртостью поверхностей вследствие длительного пребывания монеты в обращении. Различимо около 50 % оригинальных деталей рисунка монеты.</p>
-        <p>
-          <strong>VG — Very Good</strong>
-        </p>
-        <p>Very Good (удовлетворительное состояние). Значительная потёртость всей монеты. В состоянии Very Good (сокр. VG), как правило, сохраняется лишь около 25 % от первоначальных элементов рисунка монеты.</p>
-        <p>
-          <strong>G — Good</strong>
-        </p>
-        <p>Good (слабое состояние — сокр. G). Очень интенсивная потёртость монеты. Обычно различимы преимущественно самые крупные детали оформления монеты.</p>
-      </div>
-      <!-- контейнер для кнопки -->
-      <div class="modal-status__box">
-        <button class="btn-close modal-status__btn" type="button">Закрыть</button>
-      </div>
-
-    </div>
-
-  </div>
-  <!-- Модальное окно slider -->
-  <div class="modal-slider _hidden">
-    <!-- контейнер для слайдера -->
-    <div class="swiper-pagination"></div>
-
-    <div class="modal-slider__box">
-
-      <button class="modal-slider__close">
-        <svg class="modal-slider__icon-close">
-          <use xlink:href="img/sprite.svg#close_round_icon"></use>
-        </svg>
-      </button>
-
-      <!-- </div> -->
-    </div>
-
-    <div class="modal-slider__container">
-
-      <div class="swiper modal-swiper">
-        <div class="swiper-wrapper modal-slider__wrapper">
-          <div class="swiper-slide modal-slider__slide">
-            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/10_vs_rf.jpg" alt="10 рублей 2002 Вооруженные силы  ММД">
-          </div>
-          <div class="swiper-slide modal-slider__slide">
-            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/2002_avers_mmd.jpg" alt="10 рублей 2002 Вооруженные силы ММД(аверс)">
-          </div>
-        </div>
-        <div class="swiper-button-next">
-          <svg class="swiper-button-next__icon">
-            <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
-          </svg>
-        </div>
-        <div class="swiper-button-prev">
-          <svg class="swiper-button-prev__icon">
-            <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
-          </svg>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- </div> -->
   <!-- Шапка сайта -->
   <header class="header">
     <!-- Ограничивающий контейнер -->
@@ -196,6 +103,12 @@
                     <a class="submenu__link" href="coins-silver-ru.html">Серебряные</a>
                   </li>
 
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-ru.html">Статистика</a>
+                  </li>
+
                 </ul>
                 <!-- Список подменю -->
                 <ul class="submenu__list">
@@ -214,6 +127,11 @@
 
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="coins-silver-ussr.html">Серебряные</a>
+                  </li>
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-ussr.html">Статистика</a>
                   </li>
 
                 </ul>
@@ -247,6 +165,11 @@
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="coins-france.html">Франция</a>
                   </li>
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-europe.html">Статистика</a>
+                  </li>
 
                 </ul>
                 <!-- Список подменю -->
@@ -266,6 +189,12 @@
 
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="coins-usa.html">США</a>
+                  </li>
+
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-america.html">Статистика</a>
                   </li>
 
                 </ul>
@@ -335,6 +264,11 @@
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="coins-estonia.html">Эстония</a>
                   </li>
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-sng.html">Статистика</a>
+                  </li>
 
                 </ul>
                 <!-- Список подменю -->
@@ -378,6 +312,11 @@
 
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="coins-petr1.html">Пётр I</a>
+                  </li>
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-imperia-ru.html">Статистика</a>
                   </li>
 
                 </ul>
@@ -429,6 +368,11 @@
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="banknot-world.html">Банкноты Мира</a>
                   </li>
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-banknot.html">Статистика</a>
+                  </li>
 
                 </ul>
 
@@ -467,7 +411,11 @@
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="medal-wow.html">Медали и Ордена ВОВ</a>
                   </li>
-
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-medal.html">Статистика</a>
+                  </li>
 
                 </ul>
 
@@ -516,7 +464,11 @@
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="medic-other.html">Другое</a>
                   </li>
-
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-medicine.html">Статистика</a>
+                  </li>
 
                 </ul>
 
@@ -565,7 +517,11 @@
                   <li class="submenu__list-item">
                     <a class="submenu__link" href="book-different.html">Разное</a>
                   </li>
-
+                  <!-- Элемент подменю -->
+                  <li class="submenu__list-item">
+                    <!-- Ссылка на страницу -->
+                    <a class="submenu__link" href="coins-statistic-book.html">Статистика</a>
+                  </li>
 
                 </ul>
 
@@ -984,14 +940,14 @@
 
           <div class="accordion__btn-box">
 
-            <a class="accordion__prev" href="10-ru-bm-mmd-gagarin.html">
+            <a class="accordion__prev" href="10-ru-bm-smd-gagarin.html">
               <svg class="accordion__prev-icon">
                 <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
               </svg>
               Предыдущея монета
             </a>
 
-            <a class="accordion__next" href="10-ru-bm-ministr-education.html">
+            <a class="accordion__next" href="10-ru-bm-ministr-fin.html">
               <svg class="accordion__next-icon">
                 <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
               </svg>
@@ -1034,6 +990,11 @@
             <li class="footer__item">
               <a class="footer__link" href="coins-silver-ru.html">Серебряные</a>
             </li>
+            <!-- Элемент подменю -->
+            <li class="submenu__list-item">
+              <!-- Ссылка на страницу -->
+              <a class="submenu__link" href="coins-statistic-ru.html">Статистика</a>
+            </li>
             <!-- элемент списка меню -->
             <li class="footer__item">
               <h3 class="footer__subtitle">СССP</h3>
@@ -1049,6 +1010,11 @@
             <!-- элемент списка меню -->
             <li class="footer__item">
               <a class="footer__link" href="coins-silver-ussr.html">Серебряные</a>
+            </li>
+            <!-- Элемент подменю -->
+            <li class="submenu__list-item">
+              <!-- Ссылка на страницу -->
+              <a class="submenu__link" href="coins-statistic-ussr.html">Статистика</a>
             </li>
             <!-- элемент списка меню -->
             <li class="footer__item">
@@ -1078,6 +1044,11 @@
             <li class="footer__item">
               <a class="footer__link" href="coins-france.html">Франция</a>
             </li>
+            <!-- Элемент подменю -->
+            <li class="submenu__list-item">
+              <!-- Ссылка на страницу -->
+              <a class="submenu__link" href="coins-statistic-ru.html">Статистика</a>
+            </li>
             <!-- элемент списка меню -->
             <li class="footer__item">
               <h3 class="footer__subtitle">Америка</h3>
@@ -1094,8 +1065,11 @@
             <li class="footer__item">
               <a class="footer__link" href="coins-usa.html">США</a>
             </li>
-
-
+            <!-- Элемент подменю -->
+            <li class="submenu__list-item">
+              <!-- Ссылка на страницу -->
+              <a class="submenu__link" href="coins-statistic-america.html">Статистика</a>
+            </li>
 
           </ul>
           <!-- список меню -->
@@ -1160,6 +1134,11 @@
             <li class="footer__item">
               <a class="footer__link" href="coins-ukraine.html">Украина</a>
             </li>
+            <!-- Элемент подменю -->
+            <li class="submenu__list-item">
+              <!-- Ссылка на страницу -->
+              <a class="submenu__link" href="coins-statistic-sng.html">Статистика</a>
+            </li>
 
           </ul>
           <!-- список меню -->
@@ -1204,6 +1183,11 @@
             <li class="footer__item">
               <a class="footer__link" href="coins-petr1.html">Пётр I</a>
             </li>
+            <!-- Элемент подменю -->
+            <li class="submenu__list-item">
+              <!-- Ссылка на страницу -->
+              <a class="submenu__link" href="coins-statistic-imperia-ru.html">Статистика</a>
+            </li>
 
           </ul>
 
@@ -1232,6 +1216,11 @@
           <li class="footer__item">
             <a class="footer__link" href="banknot-as.html">Азия</a>
           </li>
+          <!-- Элемент подменю -->
+          <li class="submenu__list-item">
+            <!-- Ссылка на страницу -->
+            <a class="submenu__link" href="coins-statistic-banknot.html">Статистика</a>
+          </li>
 
         </ul>
 
@@ -1250,6 +1239,11 @@
           <!-- элемент списка меню -->
           <li class="footer__item">
             <a class="footer__link" href="medal-wow.html">Медали и Ордена ВОВ</a>
+          </li>
+          <!-- Элемент подменю -->
+          <li class="submenu__list-item">
+            <!-- Ссылка на страницу -->
+            <a class="submenu__link" href="coins-statistic-medal.html">Статистика</a>
           </li>
 
         </ul>
@@ -1278,6 +1272,11 @@
           <li class="footer__item">
             <a class="footer__link" href="medic-other.html">Другое</a>
           </li>
+          <!-- Элемент подменю -->
+          <li class="submenu__list-item">
+            <!-- Ссылка на страницу -->
+            <a class="submenu__link" href="coins-statistic-medicine.html">Статистика</a>
+          </li>
 
         </ul>
 
@@ -1305,13 +1304,110 @@
           <li class="footer__item">
             <a class="footer__link" href="book-different.html">Разное</a>
           </li>
+          <!-- Элемент подменю -->
+          <li class="submenu__list-item">
+            <!-- Ссылка на страницу -->
+            <a class="submenu__link" href="coins-statistic-book.html">Статистика</a>
+          </li>
 
         </ul>
 
       </div>
 
     </nav>
+    <!-- footer-slider -->
 
+
+  </div>
+  <!-- модальное окно состояние монеты -->
+  <div class="modal-status _hidden">
+
+    <!-- контейнер для окна -->
+    <div class="modal-status__container">
+      <!-- шапка окна -->
+      <div class="modal-status__header">
+        <h3 class="modal-status__title">УРОВНИ ОЦЕНКИ СОСТОЯНИЯ МОНЕТ</h3>
+        <button class="btn-close">
+          <svg class="modal-status__icon-close">
+            <use xlink:href="img/sprite.svg#close_round_icon"></use>
+          </svg>
+        </button>
+
+      </div>
+      <!-- контент окна -->
+      <div class="modal-status__body">
+        <strong>UNC — Uncirculated</strong>
+        <p>Uncirculated (превосходное состояние). В данном состоянии монета не должна иметь никаких признаков потёртости, а все её детали рисунка обычно чётко различимы. У монет в этом состоянии на всей площади их поверхности часто присутствует оригинальный «чеканный» блеск. При этом допустимо присутствие незначительных следов от хранения монет в мешках в виде мелких забоин или царапин и некоторых других недостатков.</p>
+        <p>
+          <strong>XF — Extremely Fine</strong>
+        </p>
+        <p>Extremely Fine (отличное состояние). Монеты в состоянии Extremely Fine (сокр. XF) имеют весьма незначительную потёртость наиболее выступающих мелких элементов рисунка. Обычно на таких монетах хорошо различимо не менее 90 — 95 % мелких деталей.</p>
+        <p>
+          <strong>VF — Very Fine</strong>
+        </p>
+        <p>Very Fine (очень хорошее состояние). В состоянии Very Fine (сокр. VF) монеты уже имеют весьма заметную потёртость, и несколько сглаженные детали рисунка (как правило, хорошо различимо лишь порядка 75 % деталей рисунка).</p>
+        <p>
+          <strong>F — Fine</strong>
+        </p>
+        <p>Fine (хорошее состояние). Состояние Fine (сокр. F) определяется выраженной потёртостью поверхностей вследствие длительного пребывания монеты в обращении. Различимо около 50 % оригинальных деталей рисунка монеты.</p>
+        <p>
+          <strong>VG — Very Good</strong>
+        </p>
+        <p>Very Good (удовлетворительное состояние). Значительная потёртость всей монеты. В состоянии Very Good (сокр. VG), как правило, сохраняется лишь около 25 % от первоначальных элементов рисунка монеты.</p>
+        <p>
+          <strong>G — Good</strong>
+        </p>
+        <p>Good (слабое состояние — сокр. G). Очень интенсивная потёртость монеты. Обычно различимы преимущественно самые крупные детали оформления монеты.</p>
+      </div>
+      <!-- контейнер для кнопки -->
+      <div class="modal-status__box">
+        <button class="btn-close modal-status__btn" type="button">Закрыть</button>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Модальное окно slider -->
+  <div class="modal-slider _hidden">
+    <!-- контейнер для слайдера -->
+    <div class="swiper-pagination"></div>
+
+    <div class="modal-slider__box">
+
+      <button class="modal-slider__close">
+        <svg class="modal-slider__icon-close">
+          <use xlink:href="img/sprite.svg#close_round_icon"></use>
+        </svg>
+      </button>
+
+      <!-- </div> -->
+    </div>
+
+    <div class="modal-slider__container">
+
+      <div class="swiper modal-swiper">
+        <div class="swiper-wrapper modal-slider__wrapper">
+          <div class="swiper-slide modal-slider__slide">
+            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/10_vs_rf.jpg" alt="10 рублей 2002 Вооруженные силы  ММД">
+          </div>
+          <div class="swiper-slide modal-slider__slide">
+            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/2002_avers_mmd.jpg" alt="10 рублей 2002 Вооруженные силы ММД(аверс)">
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <svg class="swiper-button-next__icon">
+            <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg class="swiper-button-prev__icon">
+            <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
+          </svg>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 
   <script src="js/main.js"></script>

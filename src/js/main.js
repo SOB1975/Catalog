@@ -455,7 +455,7 @@ if (btnClose) {
 // modal-slider
 
 const swiper3 = new Swiper(".modal-swiper", {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Pagination, Thumbs],
   spaceBetween: 0,
   slidesPerView: 1,
   pagination: {
