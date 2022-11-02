@@ -74,7 +74,7 @@
   &__img {
     border-radius: 50%;
     display: block;
-    padding: 2rem;
+    // padding: 2rem;
     width: 100%;
     height: auto;
   }
@@ -87,6 +87,7 @@
     height: 5rem;
     clip-path: polygon(100% 0, 0% 100%, 0 0);
     background-color: $bg-sidebar-hover;
+    z-index: 10;
   }
 
   &__body {
@@ -112,6 +113,7 @@
     text-align: center;
     color: $cl-text;
     line-height: 150%;
+    padding: 0 .5rem;
 
     &._row {
       // width: 100%;
@@ -167,14 +169,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-transform: uppercase;
     border-radius: .5rem;
     padding: .5rem;
     color: $bg-menu;
     background: rgba($cl-text, .8);
     top: 2%;
-    left: 75%;
+    left: 83%;
     z-index: 1000;
     cursor: default;
   }

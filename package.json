@@ -32,6 +32,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "gulp-webp": "^4.0.1",
     "npm-check-updates": "^16.0.5",
     "sass": "^1.54.4",
     "vinyl-ftp": "^0.6.1",
@@ -42,9 +43,7 @@
     "parcel-bundler": "^1.6.1",
     "swiper": "^8.3.2"
   },
-
   "tags": [
     "swiper"
   ]
-
 }

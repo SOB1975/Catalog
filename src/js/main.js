@@ -14,7 +14,7 @@ import Swiper, {
 //Pagination
 const swiper = new Swiper('.product-slider2', {
   modules: [Navigation, Pagination, Thumbs],
-  spaceBetween: 10,
+  spaceBetween: 20,
   slidesPerView: 1,
   cssMode: true,
 

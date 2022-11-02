@@ -20,6 +20,7 @@ import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import uglify from 'gulp-terser';
 import imagemin from 'gulp-imagemin';
+import webp from 'gulp-webp';
 import gutil from 'gulp-util';
 import ftp from 'vinyl-ftp';
 
@@ -95,7 +96,7 @@ const scripts = () => {
 }
 //img
 export const imgToDist = () => {
-  return gulp.src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg'])
+  return gulp.src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg', './src/img/**/**.webp'])
     .pipe(gulp.dest('./dist/img'))
 }
 // svg Sprite
@@ -159,8 +160,9 @@ export const svgToDist = () => {
 }
 //WebpToDist
 export const webpToDist = () => {
-  return gulp.src('./src/img/webp/**.webp')
-    .pipe(gulp.dest('./dist/img/webp'))
+  return gulp.src('./src/img/**/**/**/**.jpg', './src/img/**/**/**/**.jpeg')
+    .pipe(webp())
+    .pipe(gulp.dest('./dist/img/'))
 }
 
 // Clean
@@ -266,7 +268,7 @@ export const scriptsBuild = () => {
 }
 // ImgMin
 export const imageMin = () => {
-  return gulp.src(['./src/img/**/**.jpg', './src/img/**/**.png', './src/img/**/**.jpeg'])
+  return gulp.src(['./src/img/**/**/**.jpg', './src/img/**/**/**.png', './src/img/**/**/**.jpeg'])
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/img'))
 }

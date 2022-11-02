@@ -156,7 +156,15 @@
     // padding-top: 10rem;
   }
 
-  &__wrapper {}
+  &__wrapper {
+    display: flex;
+    // padding: 3rem;
+    // width: 70rem;
+    // justify-content: center;
+    align-items: center;
+    // width: 70rem;
+    // height: 70rem;
+  }
 
   &__slide {
     width: 100%;
@@ -166,11 +174,23 @@
 
   }
 
+  &__image {
+    width: 70rem;
+    height: 70rem;
+    overflow: hidden;
+
+    // padding: 15rem;
+    // &:hover .modal-slider__img {
+    //   transform: scale(1.3);
+    // }
+  }
+
   &__img {
     display: block;
-    width: 35%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
+    height: 100%;
 
     &:hover {
       cursor: grab;
