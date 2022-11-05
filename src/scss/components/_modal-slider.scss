@@ -175,8 +175,11 @@
   }
 
   &__image {
-    width: 70rem;
-    height: 70rem;
+    position: relative;
+    // width: 70%;
+    // width: 60rem;
+    height: 60rem;
+    // height: auto;
     overflow: hidden;
 
     // padding: 15rem;
@@ -184,6 +187,31 @@
     //   transform: scale(1.3);
     // }
   }
+
+  &__image--two {
+    width: 70%;
+    height: auto;
+  }
+
+  // &__two-image {
+  //   display: flex;
+  //   justify-content: center;
+  //   // gap: rem;
+  //   // width: auto;
+  //   // width: 80%;
+  //   height: 60rem;
+  //   overflow: hidden;
+  //   background: $bg-menu;
+
+  //   // &:hover+picture+source+.img-magnifier-glass {
+  //   //   display: block;
+  //   // }
+
+  //   // padding: 15rem;
+  //   // &:hover .modal-slider__img {
+  //   //   transform: scale(1.3);
+  //   // }
+  // }
 
   &__img {
     display: block;
@@ -193,9 +221,32 @@
     height: 100%;
 
     &:hover {
-      cursor: grab;
+      cursor: zoom-in;
       // padding: 15rem;
       // transform: scale(2);
     }
   }
+}
+
+.position {
+  position: relative;
+}
+
+//лупа
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid $cl-text;
+  border-radius: 50%;
+  cursor: zoom-out;
+  /*Установите размер стекла лупы:*/
+  width: 200px;
+  height: 200px;
+}
+
+// .img-magnifier-glass._hidden {
+// display: none;
+// }
+
+._hidden {
+  display: none;
 }

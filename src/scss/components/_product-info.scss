@@ -60,7 +60,16 @@
   }
 
   &__image {
+    max-width: 35rem;
+    max-height: 35rem;
     // border: 1px solid $black;
+  }
+
+  &__two-image {
+    display: flex;
+    max-width: 70rem;
+    max-height: 35rem;
+    // background: $bg-menu;
   }
 
   // стилизация изображения слайда
@@ -111,6 +120,16 @@
     border-radius: .3rem;
   }
 
+  &__two-image {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .5rem;
+    border-radius: .3rem;
+  }
+
   // стилизация radio кнопки
   &__input {
     position: absolute;
@@ -121,6 +140,10 @@
     height: 1px;
 
     &:checked+.product-slider2__image {
+      border: .1rem solid $bg-thumbs;
+    }
+
+    &:checked+.product-slider2__two-image {
       border: .1rem solid $bg-thumbs;
     }
   }
