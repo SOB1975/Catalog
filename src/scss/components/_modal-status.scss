@@ -22,6 +22,7 @@
     flex: 0 0 70%;
     background: $white;
     border-radius: .5rem;
+    z-index: 30000;
   }
 
   &__header {

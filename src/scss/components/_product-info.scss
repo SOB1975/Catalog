@@ -84,7 +84,7 @@
 }
 
 // стилизация второго слайдера
-.product-slider2 {
+.product-thumbs {
   margin-top: 2rem;
   width: 100%;
   // padding-top: 3rem;
@@ -105,7 +105,7 @@
   &__slide {
     width: 11rem !important;
     // padding: 1rem;
-    height: 11rem;
+    height: auto;
     cursor: pointer;
   }
 
@@ -139,11 +139,11 @@
     width: 1px;
     height: 1px;
 
-    &:checked+.product-slider2__image {
+    &:checked+.product-thumbs__image {
       border: .1rem solid $bg-thumbs;
     }
 
-    &:checked+.product-slider2__two-image {
+    &:checked+.product-thumbs__two-image {
       border: .1rem solid $bg-thumbs;
     }
   }

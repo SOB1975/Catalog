@@ -11,16 +11,7 @@
 </head>
 
 <body class="bg-body">
-
-  <picture>
-
-    <source srcset="img/10_politruk.webp" type="image/webp">
-    <!-- <source srcset="img/10_politruk.jpg"> -->
-    <img class="img-test" src="img/10_politruk.jpg" alt="">
-  </picture>
-
   @include('../src/html/header.html')
-
 
   <main class="main">
     <!-- breadscrumbs -->
@@ -79,56 +70,86 @@
         <div class="swiper-wrapper product-slider__wrapper">
           <!-- слайд -->
           <div class="swiper-slide product-slider__slide">
-            <!-- изображение внутри слайда -->
-            <img class="product-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/10_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД" title="10 рублей 2005 Никто не забыт ММД" />
-          </div>
-          <!-- слайд -->
-          <div class="swiper-slide product-slider__slide">
-            <!-- изображение внутри слайда -->
-            <img class="product-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/2005_avers_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД (аверс)" title="10 рублей 2005 Никто не забыт ММД(аверс)" />
-          </div>
-          <!-- слайд -->
-          <div class="swiper-slide product-slider__slide">
-            <!-- изображение внутри слайда -->
-            <img class="product-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/2005_double_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД (аверс)" title="10 рублей 2005 Никто не забыт ММД(аверс)" />
-          </div>
 
+            <div class="product-slider__image">
+              <!-- изображение внутри слайда -->
+              <picture>
+                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_60_let_pobeda.webp" type="image/webp">
+                <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД" title="10 рублей 2005 Никто не забыт ММД">
+              </picture>
+
+            </div>
+
+          </div>
+          <!-- слайд -->
+          <div class="swiper-slide product-slider__slide">
+            <div class="product-slider__image">
+              <!-- изображение внутри слайда -->
+              <picture>
+                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_avers_mmd.webp" type="image/webp">
+                <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_avers_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД (аверс)" title="10 рублей 2005 Никто не забыт ММД(аверс)">
+              </picture>
+
+            </div>
+
+          </div>
+          <!-- слайд -->
+          <div class="swiper-slide product-slider__slide">
+
+            <div class="product-slider__two-image">
+              <!-- изображение внутри слайда -->
+              <picture>
+                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_two_60_let_pobeda_mmd.webp" type="image/webp">
+                <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_two_60_let_pobeda_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД" title="10 рублей 2005 Никто не забыт ММД">
+              </picture>
+
+            </div>
+
+          </div>
 
         </div>
 
-
         <!-- второй слайдер -->
-        <div class="swiper product-slider2">
+        <div class="swiper product-thumbs">
           <!-- оболочка слайдера -->
-          <div class="swiper-wrapper product-slider2__wrapper">
+          <div class="swiper-wrapper product-thumbs__wrapper">
             <!-- слайд -->
-            <label class="swiper-slide product-slider2__slide">
+            <label class="swiper-slide product-thumbs__slide">
               <!-- radio кнопка -->
-              <input class="product-slider2__input" type="radio" name="radio-slide" checked>
+              <input class="product-thumbs__input" type="radio" name="radio-slide" checked>
               <!-- контейнер для изображения -->
-              <div class="product-slider2__image">
-                <!-- изображение -->
-                <img class="product-slider2__img" src="img/Coins/Russia/Jubilee/10ru-bm/2004/10_dmitrov.jpg" alt="10 рублей 2004 Дмитров ММД" />
+              <div class="product-thumbs__image">
+                <!-- изображение внутри слайда -->
+                <picture>
+                  <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_60_let_pobeda.webp" type="image/webp">
+                  <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД" title="10 рублей 2005 Никто не забыт ММД">
+                </picture>
               </div>
             </label>
             <!-- слайд -->
-            <label class="swiper-slide product-slider2__slide">
+            <label class="swiper-slide product-thumbs__slide">
               <!-- radio кнопка -->
-              <input class="product-slider2__input" type="radio" name="radio-slide">
+              <input class="product-thumbs__input" type="radio" name="radio-slide">
               <!-- контейнер для изображения -->
-              <div class="product-slider2__image">
-                <!-- изображение -->
-                <img class="product-slider2__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/2005_avers_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД (аверс)" />
+              <div class="product-thumbs__image">
+                <!-- изображение внутри слайда -->
+                <picture>
+                  <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_avers_mmd.webp" type="image/webp">
+                  <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_avers_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД(аверс)" title="10 рублей 2005 Никто не забыт ММД(аверс)">
+                </picture>
               </div>
             </label>
             <!-- слайд -->
-            <label class="swiper-slide product-slider2__slide">
+            <label class="swiper-slide product-thumbs__slide">
               <!-- radio кнопка -->
-              <input class="product-slider2__input" type="radio" name="radio-slide">
+              <input class="product-thumbs__input" type="radio" name="radio-slide">
               <!-- контейнер для изображения -->
-              <div class="product-slider2__image">
-                <!-- изображение -->
-                <img class="product-slider2__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/2005_double_60_let_pobeda.jpg" alt="10 рублей 2004 Дмитров ММД (аверс)" />
+              <div class="product-thumbs__two-image">
+                <!-- изображение внутри слайда -->
+                <picture>
+                  <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_two_60_let_pobeda_mmd.webp" type="image/webp">
+                  <img class="product__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/400x400/400_two_60_let_pobeda_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД" title="10 рублей 2005 Никто не забыт ММД">
+                </picture>
               </div>
             </label>
 
@@ -457,17 +478,50 @@
     <div class="modal-slider__container">
 
       <div class="swiper modal-swiper">
+
         <div class="swiper-wrapper modal-slider__wrapper">
+
           <div class="swiper-slide modal-slider__slide">
-            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/10_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД  ММД">
+
+            <div class="modal-slider__image">
+              <!-- изображение внутри слайда -->
+              <picture>
+                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/1000x1000/1000_60_let_pobeda.webp" type="image/webp">
+                <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/1000x1000/1000_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД">
+              </picture>
+
+            </div>
+
           </div>
+
           <div class="swiper-slide modal-slider__slide">
-            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/2005_avers_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД ММД(аверс)">
+
+            <div class="modal-slider__image">
+              <!-- изображение внутри слайда -->
+              <picture>
+                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/1000x1000/1000_avers_mmd.webp" type="image/webp">
+                <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/1000x1000/1000_avers_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД(аверс)">
+              </picture>
+
+            </div>
+
           </div>
+
           <div class="swiper-slide modal-slider__slide">
-            <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/2005_double_60_let_pobeda.jpg" alt="10 рублей 2005 Никто не забыт ММД ММД(аверс)">
+
+            <div class="modal-slider__image">
+              <!-- изображение внутри слайда -->
+              <picture>
+                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2005/1000x1000/1000_two_60_let_pobeda_mmd.webp" type="image/webp">
+                <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2005/1000x1000/1000_two_60_let_pobeda_mmd.jpg" alt="10 рублей 2005 Никто не забыт ММД">
+              </picture>
+
+            </div>
+
           </div>
+
         </div>
+
         <div class="swiper-button-next">
           <svg class="swiper-button-next__icon">
             <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
@@ -482,6 +536,7 @@
       </div>
 
     </div>
+
   </div>
 
   <script src="js/main.js"></script>

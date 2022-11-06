@@ -12,7 +12,7 @@ import Swiper, {
 // import htmlmin from 'gulp-htmlmin';
 
 //Pagination
-const swiper = new Swiper('.product-slider2', {
+const swiper = new Swiper('.product-thumbs', {
   modules: [Navigation, Pagination, Thumbs],
   spaceBetween: 20,
   slidesPerView: 1,
@@ -24,7 +24,7 @@ const swiper = new Swiper('.product-slider2', {
 
 });
 
-const swiper2 = new Swiper(".product-slider", {
+const swiper2 = new Swiper('.product-slider', {
   modules: [Navigation, Pagination, Thumbs],
   spaceBetween: 0,
   cssMode: true,
@@ -451,12 +451,15 @@ if (btnClose) {
     });
   });
 }
+// закрытие окна по нажатию на фон
 if (modalStatus) {
-  modalStatus.addEventListener('click', function () {
-    // скрываем модальное окно
-    modalStatus.classList.add('_hidden');
-    //возвращаем прокрутку
-    htmlTeg.classList.remove('_overflow');
+  modalStatus.addEventListener('click', function (event) {
+    // находим событие над фоном
+    if (event.target == modalStatus) {
+      modalStatus.classList.add('_hidden');
+      //возвращаем прокрутку
+      htmlTeg.classList.remove('_overflow');
+    }
   });
 }
 
@@ -479,7 +482,9 @@ const swiper3 = new Swiper(".modal-swiper", {
 
 // Закрываем модальное окно со слайдером
 const modalSliderClose = document.querySelector('.modal-slider__close');
+const modalSliderBox = document.querySelector('.modal-slider__box');
 const modalSlider = document.querySelector('.modal-slider');
+const modalSliderCont = document.querySelector('.modal-slider__container');
 const modalSliderSlide = document.querySelectorAll('.modal-slider__slide');
 if (modalSliderClose) {
   modalSliderClose.addEventListener('click', function () {
@@ -488,17 +493,42 @@ if (modalSliderClose) {
     modalSlider.classList.toggle('_hidden');
   });
 }
+// закрытие окна по нажатию на фон
+if (modalSlider) {
+  modalSlider.addEventListener('click', function (event) {
+
+    if (event.target == modalSliderCont) {
+      modalSlider.classList.add('_hidden');
+    }
+
+    if (event.target == modalSliderBox) {
+      modalSlider.classList.add('_hidden');
+    }
+
+  });
+
+  modalSliderSlide.forEach(function (item) {
+
+    item.addEventListener('click', function (event) {
+
+      if (event.target == item) {
+        modalSlider.classList.add('_hidden');
+      }
+
+    });
+
+  });
+
+}
 // открываем модальное окно со слайдером
 const slide = document.querySelectorAll('.product-slider__slide');
 if (slide) {
   slide.forEach(function (item, index) {
+
     item.addEventListener('click', function () {
       modalSlider.classList.remove('_hidden');
-      // log();
-      modalSliderSlide.forEach(function (item, i) {
-
-      });
-      // console.log(index);
+      // modalSliderSlide.forEach(function (item, i) {
+      // });
     });
   });
 }
@@ -530,6 +560,7 @@ function magnify(imgID, zoom) {
   /* а также для сенсорных экранов: */
   glass.addEventListener("touchmove", moveMagnifier);
   img.addEventListener("touchmove", moveMagnifier);
+  // закрываем лупу
   glass.addEventListener("click", function () {
     glass.setAttribute("class", "_hidden");
   });
@@ -583,81 +614,12 @@ function magnify(imgID, zoom) {
 }
 
 const myImg = document.querySelectorAll('.modal-slider__img');
-// let loupe = document.querySelector('.modal-slider__loupe');
-
 
 myImg.forEach(function (item) {
+
   item.addEventListener('click', function () {
-    // magnify(item, 2);
-    // item.classList.toggle('_active');
     item.classList.toggle('_active');
     magnify(item, 3);
 
   });
-  // item.addEventListener('mouseout', function () {
-  //   const boolean = item.classList.toggle('_active');
-  //   console.log('TEST');
-  //   // magnify(item, 0);
-  // });
 });
-const yes = true;
-const no = false;
-// console.log(loupe);
-// const myGlass = document.querySelector('.img-magnifier-glass');
-// loupe.addEventListener('click', function () {
-// const glass = document.createElement("DIV");
-// myImg.forEach(function (item) {
-// console.log(item);
-// loupe.addEventListener('click', function glass() {
-// console.log(loupe.classList.toggle('_active'));
-// if (loupe.classList.toggle('_active')) {
-// magnify(item, 2, yes);
-// console.log('ДА');
-// loupe.removeEventListener('click', glass);
-// } else {
-// console.log('НЕТ');
-
-// magnify(item, 2, no);
-// const hidden = '_hidden';
-// magnify(item, 2);
-// }
-// loupe.classList.toggle('_active');
-// console.log(item);
-// console.log(glass);
-// glass.setAttribute("class", "img-magnifier-glass");
-// magnify(item, 2);
-// item.addEventListener('mouseout', function () {
-//   console.log('TEST');
-//   // magnify(item, 2, active);
-// });
-// console.log(myGlass);
-// loupe.removeEventListener('click', glasss);
-// });
-// });
-// console.log('Test');
-// glass.classList.toggle('_active');
-// });
-
-// loupe.addEventListener('click', function glass() {
-// console.log(loupe.classList.toggle('_active'));
-// if (loupe.classList.toggle('_active')) {
-// myImg.forEach(function (item, i) {
-// console.log(item);
-// if (i == 0) {
-// magnify(item, 2);
-// } else if (i == 1) {
-// magnify(item, 2);
-// }
-// magnify(item, 2)
-// });
-// magnify(item, 2, yes);
-// console.log('ДА');
-// loupe.removeEventListener('click', glass);
-// } else {
-// console.log('НЕТ');
-
-// magnify(item, 2, no);
-// const hidden = '_hidden';
-// magnify(item, 2);
-// }
-// });
