@@ -432,7 +432,7 @@ if (btnOpen) {
   // слушаем найденную кнопку
   btnOpen.addEventListener('click', function () {
     //убираем прокруту
-    htmlTeg.classList.add('_hidden');
+    htmlTeg.classList.add('_overflow');
     // открываем модальное окно
     modalStatus.classList.remove('_hidden');
 
@@ -447,8 +447,16 @@ if (btnClose) {
       // скрываем модальное окно
       modalStatus.classList.add('_hidden');
       //возвращаем прокрутку
-      htmlTeg.classList.remove('_hidden');
+      htmlTeg.classList.remove('_overflow');
     });
+  });
+}
+if (modalStatus) {
+  modalStatus.addEventListener('click', function () {
+    // скрываем модальное окно
+    modalStatus.classList.add('_hidden');
+    //возвращаем прокрутку
+    htmlTeg.classList.remove('_overflow');
   });
 }
 
