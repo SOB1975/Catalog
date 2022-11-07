@@ -138,3 +138,29 @@ footer {
   width: 1000px;
   height: 1000px;
 }
+
+.ol {
+  list-style: decimal;
+  // display: block;
+  // margin-block-start: 0;
+  // margin-block-end: 0;
+  // padding-inline-start: 0;
+  // margin: 0;
+  padding: 0 10rem;
+  // text-align: left;
+  // display: flex;
+  // width: 100%;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+
+  & li {
+    margin-bottom: 1rem;
+    // text-align: justify;
+  }
+
+  & li span {
+    display: block;
+    // text-align: center;
+  }
+}
