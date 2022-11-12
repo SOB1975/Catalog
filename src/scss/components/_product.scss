@@ -4,11 +4,10 @@
   flex-wrap: wrap;
   // gap: 3.3%;
   justify-content: space-between;
+
 }
 
-// .product._row {
-//   flex: 0 0 100%;
-// }
+
 
 .product {
   position: relative;
@@ -17,6 +16,14 @@
   margin-bottom: 2rem;
   border-radius: .3rem;
   background: $white;
+
+  // &:nth-child(n + 10) {
+  //   display: none;
+  // }
+
+  &._is-visible {
+    display: block;
+  }
 
   &:hover {
     transform: translateY(-3%);
@@ -87,6 +94,17 @@
     height: 5rem;
     clip-path: polygon(100% 0, 0% 100%, 0 0);
     background-color: $bg-sidebar-hover;
+    z-index: 10;
+  }
+
+  &__triangle-red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 5rem;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background-color: $cl-hover;
     z-index: 10;
   }
 
@@ -181,3 +199,9 @@
     cursor: default;
   }
 }
+
+
+
+// .product._row {
+//   flex: 0 0 100%;
+// }

@@ -623,3 +623,24 @@ myImg.forEach(function (item) {
 
   });
 });
+
+// кнопка показать еще
+const showMore = document.querySelector('.show-more');
+// все карточки(количество)
+const productsLenght = document.querySelectorAll('.product').length;
+// видимое количество элементов
+let items = 9;
+
+showMore.addEventListener('click', function () {
+  console.log('TEST');
+  // шаг по 3 карточки
+  items += 6;
+  const array = Array.from(document.querySelector('.products-box').children);
+  const visItems = array.slice(0, items);
+  console.log(array);
+  console.log(visItems);
+  visItems.forEach(el => el.classList.add('_is-visible'));
+  if (visItems.length === productsLenght) {
+    showMore.style.display = 'none';
+  }
+});
