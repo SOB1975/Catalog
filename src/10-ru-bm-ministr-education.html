@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/Other/coins_icon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
   <title>10 рублей 2002 Министерство образования</title>
 </head>
 
@@ -14,7 +15,7 @@
   <!-- Шапка сайта -->
   @include('../src/html/header.html')
 
-  <main class="main">
+  <main id="swup" class="main transition-fade">
     <!-- breadscrumbs -->
     <div class="container">
 
@@ -43,7 +44,7 @@
           </li>
 
           <li class="breadscrumb__item">
-            <a class="breadscrumb__link" title="Юбилейные" href="10ru-bm.html">
+            <a class="breadscrumb__link" title="Юбилейные" href="/10ru-bm.html">
               Биметалические 10 рублей 2000-2022гг.
             </a>
           </li>
@@ -470,14 +471,14 @@
 
           <div class="accordion__btn-box">
 
-            <a class="accordion__prev" href="10-ru-bm-ministr-fin.html">
+            <a class="accordion__prev" href="/10-ru-bm-ministr-fin.html">
               <svg class="accordion__prev-icon">
                 <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
               </svg>
               Предыдущея монета
             </a>
 
-            <a class="accordion__next" href="10-ru-bm-ministr-econom.html">
+            <a class="accordion__next" href="/10-ru-bm-ministr-econom.html">
               <svg class="accordion__next-icon">
                 <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
               </svg>
@@ -492,91 +493,91 @@
 
     </section>
 
+    <!-- модальное окно состояние монеты -->
+    @include('../src/html/modal-status.html')
+    <!-- Модальное окно slider -->
+    <div class="modal-slider _hidden">
+      <!-- контейнер для слайдера -->
+      <div class="swiper-pagination"></div>
 
-  </main>
+      <div class="modal-slider__box">
 
-  @include('../src/html/footer.html')
-  <!-- модальное окно состояние монеты -->
-  @include('../src/html/modal-status.html')
-  <!-- Модальное окно slider -->
-  <div class="modal-slider _hidden">
-    <!-- контейнер для слайдера -->
-    <div class="swiper-pagination"></div>
-
-    <div class="modal-slider__box">
-
-      <button class="modal-slider__close">
-        <svg class="modal-slider__icon-close">
-          <use xlink:href="img/sprite.svg#close_round_icon"></use>
-        </svg>
-      </button>
-
-      <!-- </div> -->
-    </div>
-
-    <div class="modal-slider__container">
-
-      <div class="swiper modal-swiper">
-
-        <div class="swiper-wrapper modal-slider__wrapper">
-
-          <div class="swiper-slide modal-slider__slide">
-
-            <div class="modal-slider__image">
-              <!-- изображение внутри слайда -->
-              <picture>
-                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_min_obraz.webp" type="image/webp">
-                <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_min_obraz.jpg" alt="10 рублей 2002 Министерство образования  ММД">
-              </picture>
-
-            </div>
-
-          </div>
-
-          <div class="swiper-slide modal-slider__slide">
-            <div class="modal-slider__image">
-              <!-- изображение внутри слайда -->
-              <picture>
-                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_avers_mmd.webp" type="image/webp">
-                <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_avers_mmd.jpg" alt="10 рублей 2002 Министерство образования  ММД(аверс)">
-              </picture>
-
-            </div>
-
-          </div>
-
-          <div class="swiper-slide modal-slider__slide">
-
-            <div class="modal-slider__image">
-              <!-- изображение внутри слайда -->
-              <picture>
-                <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_two_min_education.webp" type="image/webp">
-                <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_two_min_education.jpg" alt="10 рублей 2002 Министерство образования  ММД">
-              </picture>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="swiper-button-next">
-          <svg class="swiper-button-next__icon">
-            <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
+        <button class="modal-slider__close">
+          <svg class="modal-slider__icon-close">
+            <use xlink:href="img/sprite.svg#close_round_icon"></use>
           </svg>
-        </div>
-        <div class="swiper-button-prev">
-          <svg class="swiper-button-prev__icon">
-            <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
-          </svg>
+        </button>
+
+        <!-- </div> -->
+      </div>
+
+      <div class="modal-slider__container">
+
+        <div class="swiper modal-swiper">
+
+          <div class="swiper-wrapper modal-slider__wrapper">
+
+            <div class="swiper-slide modal-slider__slide">
+
+              <div class="modal-slider__image">
+                <!-- изображение внутри слайда -->
+                <picture>
+                  <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_min_obraz.webp" type="image/webp">
+                  <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_min_obraz.jpg" alt="10 рублей 2002 Министерство образования  ММД">
+                </picture>
+
+              </div>
+
+            </div>
+
+            <div class="swiper-slide modal-slider__slide">
+              <div class="modal-slider__image">
+                <!-- изображение внутри слайда -->
+                <picture>
+                  <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_avers_mmd.webp" type="image/webp">
+                  <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_avers_mmd.jpg" alt="10 рублей 2002 Министерство образования  ММД(аверс)">
+                </picture>
+
+              </div>
+
+            </div>
+
+            <div class="swiper-slide modal-slider__slide">
+
+              <div class="modal-slider__image">
+                <!-- изображение внутри слайда -->
+                <picture>
+                  <source srcset="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_two_min_education.webp" type="image/webp">
+                  <img class="modal-slider__img" src="img/Coins/Russia/Jubilee/10ru-bm/2002/1000x1000/1000_two_min_education.jpg" alt="10 рублей 2002 Министерство образования  ММД">
+                </picture>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-button-next">
+            <svg class="swiper-button-next__icon">
+              <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-prev">
+            <svg class="swiper-button-prev__icon">
+              <use xlink:href="img/sprite.svg#arrow_navigation_icon"></use>
+            </svg>
+          </div>
+
         </div>
 
       </div>
-
     </div>
-  </div>
+  </main>
 
-  <script src="js/main.js"></script>
+  @include('../src/html/footer.html')
+
+
+
 </body>
 
 </html>
