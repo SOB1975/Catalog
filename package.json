@@ -40,8 +40,10 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@swup/scripts-plugin": "^1.1.0",
     "parcel-bundler": "^1.6.1",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "swup": "^2.0.19"
   },
   "tags": [
     "swiper"

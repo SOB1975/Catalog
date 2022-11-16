@@ -90,7 +90,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba($cl-text, .9);
-  z-index: 20000;
+  z-index: 30000;
 
   &._hidden {
     display: none;
@@ -102,6 +102,8 @@
     padding-right: 5rem;
     padding-top: 1%;
     align-items: center;
+    // background: rgba($cl-text, .9);
+    z-index: 40000;
   }
 
   &__loupe {
@@ -129,6 +131,7 @@
     background: transparent;
     border: none;
     fill: $bg-menu;
+    // z-index: 40001;
 
     &:hover {
       cursor: pointer;
