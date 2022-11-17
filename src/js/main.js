@@ -2081,7 +2081,8 @@ function init() {
         //прокручиваем страницу вверх
         window.scrollTo(0, 0);
         modalSlider.classList.toggle('_hidden');
-        header.classList.toggle('_zindex');
+        header.classList.add('_zindex');
+        console.log(htmlTeg);
         //убираем прокруту
         htmlTeg.classList.add('_overflow');
 
@@ -2097,25 +2098,27 @@ function init() {
   if (modalSliderClose) {
     modalSliderClose.addEventListener('click', function () {
       modalSlider.classList.toggle('_hidden');
-      header.classList.toggle('_zindex');
+      header.classList.remove('_zindex');
       //возвращаем прокрутку
       htmlTeg.classList.remove('_overflow');
     });
   }
+
+  // console.log(document.querySelectorAll('.modal-slider__slide'));
   // закрытие окна по нажатию на фон
   if (modalSlider) {
     modalSlider.addEventListener('click', function (event) {
 
       if (event.target == modalSliderCont) {
         modalSlider.classList.add('_hidden');
-        header.classList.toggle('_zindex');
+        header.classList.remove('_zindex');
         //возвращаем прокрутку
         htmlTeg.classList.remove('_overflow');
       }
 
       if (event.target == modalSliderBox) {
         modalSlider.classList.add('_hidden');
-        header.classList.toggle('_zindex');
+        header.classList.remove('_zindex');
         //возвращаем прокрутку
         htmlTeg.classList.remove('_overflow');
       }
@@ -2128,6 +2131,9 @@ function init() {
 
         if (event.target == item) {
           modalSlider.classList.add('_hidden');
+          header.classList.remove('_zindex');
+          //возвращаем прокрутку
+          htmlTeg.classList.remove('_overflow');
         }
 
       });
@@ -2338,7 +2344,7 @@ function init() {
       htmlTeg.classList.add('_overflow');
       // открываем модальное окно
       modalStatus.classList.remove('_hidden');
-      header.classList.toggle('_zindex');
+      header.classList.add('_zindex');
 
     });
   }
@@ -2352,7 +2358,7 @@ function init() {
         modalStatus.classList.add('_hidden');
         //возвращаем прокрутку
         htmlTeg.classList.remove('_overflow');
-        header.classList.toggle('_zindex');
+        header.classList.remove('_zindex');
       });
     });
   }
@@ -2364,7 +2370,7 @@ function init() {
         modalStatus.classList.add('_hidden');
         //возвращаем прокрутку
         htmlTeg.classList.remove('_overflow');
-        header.classList.toggle('_zindex');
+        header.classList.remove('_zindex');
       }
     });
   }
@@ -2463,3 +2469,46 @@ function init() {
 init();
 
 swup.on('contentReplaced', init);
+
+//кнопка прокрутки вверх
+const sttElem = document.querySelector('.stt');
+const screanHeight = window.innerHeight;
+
+const sttScroll = () => {
+  document.addEventListener('scroll', (e) => {
+    if (screanHeight <= window.scrollY) {
+      sttElem.classList.add('stt__active');
+    } else if (e.target.scrollingElement.scrollTop <= screanHeight) {
+      sttElem.classList.remove('stt__active');
+      sttElem.style.pointerEvents = 'auto';
+    }
+  });
+};
+
+const sttClick = () => {
+  sttElem.addEventListener('click', () => {
+    const docHeight = window.scrollY;
+    let progress = 0;
+    let position = docHeight;
+    const speed = 5; // When increasing this value. The scrolling speed will increase
+
+    sttElem.style.pointerEvents = 'none';
+
+    const sttAnim = () => {
+      progress += 1;
+      position -= progress * speed;
+      window.scrollTo(0, position);
+      if (position > 0) {
+        requestAnimationFrame(sttAnim);
+      }
+    };
+    requestAnimationFrame(sttAnim);
+  });
+};
+
+const sttFunc = () => {
+  sttScroll();
+  sttClick();
+};
+
+document.addEventListener('DOMContentLoaded', sttFunc);

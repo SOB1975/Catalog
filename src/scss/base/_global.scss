@@ -9,6 +9,10 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 
+  &._overflow {
+    overflow: hidden;
+  }
+
   &::-webkit-scrollbar {
     width: 1rem;
   }
@@ -84,9 +88,7 @@ html {
 
 }
 
-.html._overflow {
-  overflow: hidden;
-}
+
 
 body {
   display: flex;
@@ -126,7 +128,7 @@ footer {
 }
 
 .bg-body {
-  background: $white;
+  background-color: $white;
 }
 
 .img-test {

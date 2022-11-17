@@ -16,6 +16,7 @@
   }
 
   &__box {
+    background-color: $bg-menu;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -250,6 +251,7 @@
     margin-top: 3rem;
     display: flex;
     border: .1rem solid $bg-accordion;
+    background-color: $bg-menu;
   }
 
   // &__prev {
