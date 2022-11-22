@@ -29,7 +29,7 @@ import ftp from 'vinyl-ftp';
 // html
 
 export const htmlinclude = () => {
-  return gulp.src('./src/*.html')
+  return gulp.src('./src/**.html')
     .pipe(fileinclude({
       prefix: '@',
       basepath: '@file'
@@ -180,7 +180,7 @@ export const watchFiles = () => {
   });
   // следим за файлами стилей
   gulp.watch('./src/scss/**/**.scss', styles);
-  gulp.watch('./src/*.html', htmlinclude);
+  gulp.watch('./src/**.html', htmlinclude);
   gulp.watch('./src/img/**/**.jpg', imgToDist);
   gulp.watch('./src/img/**/**.png', imgToDist);
   gulp.watch('./src/img/**/**.jpeg', imgToDist);
