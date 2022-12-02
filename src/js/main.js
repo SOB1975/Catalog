@@ -5,6 +5,10 @@ import Swiper, {
   Pagination,
   Thumbs
 } from 'swiper';
+import {
+  countPrice,
+  filter
+} from './func.js';
 // Код определяет на каком устройстве запущен сайт
 const isMobile = {
   Android: function () {
@@ -56,8 +60,8 @@ if (isMobile.any()) {
 // let items = 9;
 
 // showMore.addEventListener('click', function () {
-//   console.log('TEST');
-//   // шаг по 3 карточки
+//   //   console.log('TEST');
+//   //   // шаг по 3 карточки
 //   items += 6;
 //   const array = Array.from(document.querySelector('.products-box').children);
 //   const visItems = array.slice(0, items);
@@ -1907,9 +1911,7 @@ function init() {
   const subMenu = document.querySelectorAll('.submenu');
   console.log(allMenuItem);
   if (allMenuItem) {
-    console.log('Test');
     allMenuItem.forEach(function (item, index) {
-      console.log(index);
       item.addEventListener('click', function (e) {
         arrowAll.forEach(function (item, i) {
           if (index == i) {
@@ -1934,13 +1936,10 @@ function init() {
   const menuFiltr = document.querySelectorAll('.menu-sidebar__dropdown');
   const menuFiltrIcon = document.querySelectorAll('.menu-sidebar__icon');
   const menuFiltrSubmenu = document.querySelectorAll('.menu-sidebar__submenu');
-  console.log(menuFiltr);
-  console.log(menuFiltrSubmenu);
 
   if (menuFiltr) {
     // перебираем по очереди пункты меню фильтров
     menuFiltr.forEach(function (item, index) {
-      console.log(item);
       // слушаем выбраный пункт меню
       item.addEventListener('click', function (element) {
 
@@ -1975,7 +1974,6 @@ function init() {
           }
 
         });
-        console.log('Click');
         item.classList.toggle('_bg');
         menuSbIcon.forEach(function (item, i) {
           if (index == i) {
@@ -2512,3 +2510,205 @@ const sttFunc = () => {
 };
 
 document.addEventListener('DOMContentLoaded', sttFunc);
+
+//Таблица статистики
+const tableNumber = document.querySelectorAll('.table__number');
+const tablePrice = document.querySelectorAll('.table__price');
+const tableCount = document.querySelectorAll('.table__count');
+const tablePriceAll = document.querySelectorAll('.table__price-all');
+// счетчик продукта в таблице
+tableNumber.forEach(function (item, index) {
+  if (item) {
+    item.innerHTML = index + 1;
+  }
+});
+
+const arrayPrice = Array.from(document.querySelectorAll('.table__price'));
+const arrayCount = Array.from(document.querySelectorAll('.table__count'));
+const arrayPriceAll = Array.from(document.querySelectorAll('.table__price-all'));
+// считаем общую стоимость текущего продукта
+for (let i = 0; i < arrayPriceAll.length; i++) {
+  arrayPriceAll[i].innerHTML = Number(arrayPrice[i].innerHTML) * Number(arrayCount[i].innerHTML);
+}
+//==================================================================================
+// коллекция всех монет
+const all = document.querySelectorAll('.all');
+//select
+const selects = document.querySelector('.sorting__select');
+
+selects.addEventListener('change', function (e) {
+  const currentCategory = selects.options[e.target.selectedIndex].dataset.filter;
+  checkBoxs.forEach((item) => {
+    item.checked = false;
+  });
+  filter(currentCategory, all);
+});
+
+// Общая статистика в отдельной таблицы
+//находим таблицу со статистикой
+const tableStatistic = document.querySelector('.table-statistic');
+//монеты в коллекции
+const collection = document.querySelectorAll('.collection');
+//коллекция отсутсвующих монет 
+const absent = document.querySelectorAll('.absent');
+//ячейка таблицы кол-во монет в категории
+const catCount = document.querySelector('.table-statistic__cat-count');
+//ячейка таблицы цена монет в категории
+const catPrice = document.querySelector('.table-statistic__cat-price');
+//ячейка таблицы кол-во отсутствующих монет в коллекции
+const collAbsentCount = document.querySelector('.table-statistic__collabsent-count');
+//ячейка таблицы цена отсутствующих монет в коллекции
+const collAbsentPrice = document.querySelector('.table-statistic__collabsent-price');
+//ячейка таблицы кол-во монет в коллекции
+const collCollCount = document.querySelector('.table-statistic__coll-count');
+//ячейка таблицы кол-во цен монет в коллекции
+const collCollPrice = document.querySelector('.table-statistic__coll-priceall');
+
+if (tableStatistic) {
+  //записываем кол-во монет в категории
+  if (catCount) {
+    catCount.innerHTML = all.length;
+  }
+
+  //записываем кол-во монет отсутствующих в категории
+  if (collAbsentCount) {
+    collAbsentCount.innerHTML = absent.length;
+  }
+
+  //создание нового массива из всех монет
+  let allPrice = Array.from(all);
+  // Суммируем цену всех монет в категории
+  countPrice(allPrice, catPrice, 3);
+  //создание нового массива из отсутствующих монет
+  let absentPrice = Array.from(absent);
+  // Суммируем цену отсутствующих монет в категории
+  countPrice(absentPrice, collAbsentPrice, 3);
+  //создание нового массива из монет в коллекции
+  let collPrice = Array.from(collection);
+  // Суммируем цену монет в коллекции
+  countPrice(collPrice, collCollPrice, 5);
+  //создается массив кол-во всех монет в коллекции в категории
+  let collCount = Array.from(all);
+  // Суммирует монеты в коллекции
+  countPrice(collCount, collCollCount, 4);
+}
+
+
+//фильтрация по годам
+//монеты 2000г
+const y2000 = document.querySelectorAll('.y2000');
+//коллекция checkbox фильтров по годам
+const checkBoxs = document.querySelectorAll('.menu-sidebar__submenu-fake');
+// 
+checkBoxs.forEach(function (item) {
+  // console.log(item);
+  item.addEventListener('change', function (event) {
+    console.log('КЛИК');
+    if (item.checked) {
+      // console.log('ЧЕКЕД');
+      // console.log(event.target.dataset.filter);
+      const currentCategory = event.target.dataset.filter;
+      filter(currentCategory, all);
+      // console.log(currentCategory);
+    } else {
+      all.forEach(function (item) {
+        item.classList.remove('hide');
+      });
+      console.log('Не выбрано');
+    }
+  });
+
+})
+//===================================================================================
+//находим год в фильтре год выпуска
+const count2000 = document.getElementById('2000');
+// записываем кол-во монет в пунктах фильтров
+count2000.innerHTML = document.querySelectorAll('.y2000').length;
+//находим год в фильтре год выпуска
+const count2001 = document.getElementById('2001');
+// записываем кол-во монет в пунктах фильтров
+count2001.innerHTML = document.querySelectorAll('.y2001').length;
+//находим год в фильтре год выпуска
+const count2002 = document.getElementById('2002');
+// записываем кол-во монет в пунктах фильтров
+count2002.innerHTML = document.querySelectorAll('.y2002').length;
+//находим год в фильтре год выпуска
+const count2003 = document.getElementById('2003');
+// записываем кол-во монет в пунктах фильтров
+count2003.innerHTML = document.querySelectorAll('.y2003').length;
+//находим год в фильтре год выпуска
+const count2004 = document.getElementById('2004');
+// записываем кол-во монет в пунктах фильтров
+count2004.innerHTML = document.querySelectorAll('.y2004').length;
+//находим год в фильтре год выпуска
+const count2005 = document.getElementById('2005');
+// записываем кол-во монет в пунктах фильтров
+count2005.innerHTML = document.querySelectorAll('.y2005').length;
+//находим год в фильтре год выпуска
+const count2006 = document.getElementById('2006');
+// записываем кол-во монет в пунктах фильтров
+count2006.innerHTML = document.querySelectorAll('.y2006').length;
+//находим год в фильтре год выпуска
+const count2007 = document.getElementById('2007');
+// записываем кол-во монет в пунктах фильтров
+count2007.innerHTML = document.querySelectorAll('.y2007').length;
+//находим год в фильтре год выпуска
+const count2008 = document.getElementById('2008');
+// записываем кол-во монет в пунктах фильтров
+count2008.innerHTML = document.querySelectorAll('.y2008').length;
+//находим год в фильтре год выпуска
+const count2009 = document.getElementById('2009');
+// записываем кол-во монет в пунктах фильтров
+count2009.innerHTML = document.querySelectorAll('.y2009').length;
+//находим год в фильтре год выпуска
+const count2010 = document.getElementById('2010');
+// записываем кол-во монет в пунктах фильтров
+count2010.innerHTML = document.querySelectorAll('.y2010').length;
+//находим год в фильтре год выпуска
+const count2011 = document.getElementById('2011');
+// записываем кол-во монет в пунктах фильтров
+count2011.innerHTML = document.querySelectorAll('.y2011').length;
+//находим год в фильтре год выпуска
+const count2012 = document.getElementById('2012');
+// записываем кол-во монет в пунктах фильтров
+count2012.innerHTML = document.querySelectorAll('.y2012').length;
+//находим год в фильтре год выпуска
+const count2013 = document.getElementById('2013');
+// записываем кол-во монет в пунктах фильтров
+count2013.innerHTML = document.querySelectorAll('.y2013').length;
+//находим год в фильтре год выпуска
+const count2014 = document.getElementById('2014');
+// записываем кол-во монет в пунктах фильтров
+count2014.innerHTML = document.querySelectorAll('.y2014').length;
+//находим год в фильтре год выпуска
+const count2015 = document.getElementById('2015');
+// записываем кол-во монет в пунктах фильтров
+count2015.innerHTML = document.querySelectorAll('.y2015').length;
+//находим год в фильтре год выпуска
+const count2016 = document.getElementById('2016');
+// записываем кол-во монет в пунктах фильтров
+count2016.innerHTML = document.querySelectorAll('.y2016').length;
+//находим год в фильтре год выпуска
+const count2017 = document.getElementById('2017');
+// записываем кол-во монет в пунктах фильтров
+count2017.innerHTML = document.querySelectorAll('.y2017').length;
+//находим год в фильтре год выпуска
+const count2018 = document.getElementById('2018');
+// записываем кол-во монет в пунктах фильтров
+count2018.innerHTML = document.querySelectorAll('.y2018').length;
+//находим год в фильтре год выпуска
+const count2019 = document.getElementById('2019');
+// записываем кол-во монет в пунктах фильтров
+count2019.innerHTML = document.querySelectorAll('.y2019').length;
+//находим год в фильтре год выпуска
+const count2020 = document.getElementById('2020');
+// записываем кол-во монет в пунктах фильтров
+count2020.innerHTML = document.querySelectorAll('.y2020').length;
+//находим год в фильтре год выпуска
+const count2021 = document.getElementById('2021');
+// записываем кол-во монет в пунктах фильтров
+count2021.innerHTML = document.querySelectorAll('.y2021').length;
+//находим год в фильтре год выпуска
+const count2022 = document.getElementById('2022');
+// записываем кол-во монет в пунктах фильтров
+count2022.innerHTML = document.querySelectorAll('.y2022').length;
