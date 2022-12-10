@@ -2622,93 +2622,161 @@ checkBoxs.forEach(function (item) {
 //===================================================================================
 //находим год в фильтре год выпуска
 const count2000 = document.getElementById('2000');
-// записываем кол-во монет в пунктах фильтров
-count2000.innerHTML = document.querySelectorAll('.y2000').length;
+if (count2000) {
+  // записываем кол-во монет в пунктах фильтров
+  count2000.innerHTML = document.querySelectorAll('.y2000').length;
+}
+
 //находим год в фильтре год выпуска
 const count2001 = document.getElementById('2001');
-// записываем кол-во монет в пунктах фильтров
-count2001.innerHTML = document.querySelectorAll('.y2001').length;
+if (count2001) {
+  // записываем кол-во монет в пунктах фильтров
+  count2001.innerHTML = document.querySelectorAll('.y2001').length;
+}
+
 //находим год в фильтре год выпуска
 const count2002 = document.getElementById('2002');
-// записываем кол-во монет в пунктах фильтров
-count2002.innerHTML = document.querySelectorAll('.y2002').length;
+if (count2002) {
+  // записываем кол-во монет в пунктах фильтров
+  count2002.innerHTML = document.querySelectorAll('.y2002').length;
+}
+
 //находим год в фильтре год выпуска
 const count2003 = document.getElementById('2003');
-// записываем кол-во монет в пунктах фильтров
-count2003.innerHTML = document.querySelectorAll('.y2003').length;
+if (count2003) {
+  // записываем кол-во монет в пунктах фильтров
+  count2003.innerHTML = document.querySelectorAll('.y2003').length;
+}
+
 //находим год в фильтре год выпуска
 const count2004 = document.getElementById('2004');
-// записываем кол-во монет в пунктах фильтров
-count2004.innerHTML = document.querySelectorAll('.y2004').length;
+if (count2004) {
+  // записываем кол-во монет в пунктах фильтров
+  count2004.innerHTML = document.querySelectorAll('.y2004').length;
+}
+
 //находим год в фильтре год выпуска
 const count2005 = document.getElementById('2005');
-// записываем кол-во монет в пунктах фильтров
-count2005.innerHTML = document.querySelectorAll('.y2005').length;
+if (count2005) {
+  // записываем кол-во монет в пунктах фильтров
+  count2005.innerHTML = document.querySelectorAll('.y2005').length;
+}
+
 //находим год в фильтре год выпуска
 const count2006 = document.getElementById('2006');
-// записываем кол-во монет в пунктах фильтров
-count2006.innerHTML = document.querySelectorAll('.y2006').length;
+if (count2006) {
+  // записываем кол-во монет в пунктах фильтров
+  count2006.innerHTML = document.querySelectorAll('.y2006').length;
+}
+
 //находим год в фильтре год выпуска
 const count2007 = document.getElementById('2007');
-// записываем кол-во монет в пунктах фильтров
-count2007.innerHTML = document.querySelectorAll('.y2007').length;
+if (count2007) {
+  // записываем кол-во монет в пунктах фильтров
+  count2007.innerHTML = document.querySelectorAll('.y2007').length;
+}
+
 //находим год в фильтре год выпуска
 const count2008 = document.getElementById('2008');
-// записываем кол-во монет в пунктах фильтров
-count2008.innerHTML = document.querySelectorAll('.y2008').length;
+if (count2008) {
+  // записываем кол-во монет в пунктах фильтров
+  count2008.innerHTML = document.querySelectorAll('.y2008').length;
+}
+
 //находим год в фильтре год выпуска
 const count2009 = document.getElementById('2009');
-// записываем кол-во монет в пунктах фильтров
-count2009.innerHTML = document.querySelectorAll('.y2009').length;
+if (count2009) {
+  // записываем кол-во монет в пунктах фильтров
+  count2009.innerHTML = document.querySelectorAll('.y2009').length;
+}
+
 //находим год в фильтре год выпуска
 const count2010 = document.getElementById('2010');
-// записываем кол-во монет в пунктах фильтров
-count2010.innerHTML = document.querySelectorAll('.y2010').length;
+if (count2010) {
+  // записываем кол-во монет в пунктах фильтров
+  count2010.innerHTML = document.querySelectorAll('.y2010').length;
+}
+
 //находим год в фильтре год выпуска
 const count2011 = document.getElementById('2011');
-// записываем кол-во монет в пунктах фильтров
-count2011.innerHTML = document.querySelectorAll('.y2011').length;
+if (count2011) {
+  // записываем кол-во монет в пунктах фильтров
+  count2011.innerHTML = document.querySelectorAll('.y2011').length;
+}
+
 //находим год в фильтре год выпуска
 const count2012 = document.getElementById('2012');
-// записываем кол-во монет в пунктах фильтров
-count2012.innerHTML = document.querySelectorAll('.y2012').length;
+if (count2012) {
+  // записываем кол-во монет в пунктах фильтров
+  count2012.innerHTML = document.querySelectorAll('.y2012').length;
+}
+
 //находим год в фильтре год выпуска
 const count2013 = document.getElementById('2013');
-// записываем кол-во монет в пунктах фильтров
-count2013.innerHTML = document.querySelectorAll('.y2013').length;
+if (count2013) {
+  // записываем кол-во монет в пунктах фильтров
+  count2013.innerHTML = document.querySelectorAll('.y2013').length;
+}
+
 //находим год в фильтре год выпуска
 const count2014 = document.getElementById('2014');
-// записываем кол-во монет в пунктах фильтров
-count2014.innerHTML = document.querySelectorAll('.y2014').length;
+if (count2014) {
+  // записываем кол-во монет в пунктах фильтров
+  count2014.innerHTML = document.querySelectorAll('.y2014').length;
+}
+
 //находим год в фильтре год выпуска
 const count2015 = document.getElementById('2015');
-// записываем кол-во монет в пунктах фильтров
-count2015.innerHTML = document.querySelectorAll('.y2015').length;
+if (count2015) {
+  // записываем кол-во монет в пунктах фильтров
+  count2015.innerHTML = document.querySelectorAll('.y2015').length;
+}
+
 //находим год в фильтре год выпуска
 const count2016 = document.getElementById('2016');
-// записываем кол-во монет в пунктах фильтров
-count2016.innerHTML = document.querySelectorAll('.y2016').length;
+if (count2016) {
+  // записываем кол-во монет в пунктах фильтров
+  count2016.innerHTML = document.querySelectorAll('.y2016').length;
+}
+
 //находим год в фильтре год выпуска
 const count2017 = document.getElementById('2017');
-// записываем кол-во монет в пунктах фильтров
-count2017.innerHTML = document.querySelectorAll('.y2017').length;
+if (count2017) {
+  // записываем кол-во монет в пунктах фильтров
+  count2017.innerHTML = document.querySelectorAll('.y2017').length;
+}
+
 //находим год в фильтре год выпуска
 const count2018 = document.getElementById('2018');
-// записываем кол-во монет в пунктах фильтров
-count2018.innerHTML = document.querySelectorAll('.y2018').length;
+if (count2018) {
+  // записываем кол-во монет в пунктах фильтров
+  count2018.innerHTML = document.querySelectorAll('.y2018').length;
+}
+
 //находим год в фильтре год выпуска
 const count2019 = document.getElementById('2019');
-// записываем кол-во монет в пунктах фильтров
-count2019.innerHTML = document.querySelectorAll('.y2019').length;
+if (count2019) {
+  // записываем кол-во монет в пунктах фильтров
+  count2019.innerHTML = document.querySelectorAll('.y2019').length;
+}
+
 //находим год в фильтре год выпуска
 const count2020 = document.getElementById('2020');
-// записываем кол-во монет в пунктах фильтров
-count2020.innerHTML = document.querySelectorAll('.y2020').length;
+if (count2020) {
+  // записываем кол-во монет в пунктах фильтров
+  count2020.innerHTML = document.querySelectorAll('.y2020').length;
+}
+
 //находим год в фильтре год выпуска
 const count2021 = document.getElementById('2021');
-// записываем кол-во монет в пунктах фильтров
-count2021.innerHTML = document.querySelectorAll('.y2021').length;
+if (count2021) {
+  // записываем кол-во монет в пунктах фильтров
+  count2021.innerHTML = document.querySelectorAll('.y2021').length;
+}
+
 //находим год в фильтре год выпуска
 const count2022 = document.getElementById('2022');
-// записываем кол-во монет в пунктах фильтров
-count2022.innerHTML = document.querySelectorAll('.y2022').length;
+if (count2022) {
+  // записываем кол-во монет в пунктах фильтров
+  count2022.innerHTML = document.querySelectorAll('.y2022').length;
+}
